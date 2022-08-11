@@ -4,14 +4,14 @@ export class Hero extends Component {
   render() {
     return (
       <div className="flex flex-col">
-        <div className="px-4 pb-7 flex flex-col items-center bg-slate-200 relative">
+        <div className="pb-7 flex flex-col items-center bg-slate-200 relative">
           <div className="absolute z-0 bg-indigo-900 w-1/2 h-96  rounded-bl-full self-end"></div>
           <img
             className="w-72 z-10"
             src="./img/hero-cv.png"
             alt="CV Example."
           />
-          <div className="flex flex-col items-center gap-3 z-10">
+          <div className="px-4 flex flex-col items-center gap-3 z-10">
             <div className="flex gap-1">
               <img className="w-5" src="./img/star.svg" alt="star" />
               <img className="w-5" src="./img/star.svg" alt="star" />
