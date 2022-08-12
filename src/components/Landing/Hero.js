@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Hero extends Component {
   render() {
     return (
-      <div className="relative bg-slate-200">
+      <div className="relative bg-slate-200 w-full">
         <div className="absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
         <div className="relative flex flex-col items-center">
           <div className="flex flex-col container lg:max-w-6xl items-center relative">
@@ -14,7 +14,7 @@ export class Hero extends Component {
               width="500"
             />
           </div>
-          <div className="">
+          <div className="w-full">
             <div className="pb-7 flex flex-col items-center">
               <div className="px-4 flex flex-col items-center container lg:items-start gap-3 lg:max-w-6xl lg:pt-16 lg:pb-4">
                 <div className="flex gap-1">
@@ -34,7 +34,7 @@ export class Hero extends Component {
                 </p>
               </div>
             </div>
-            <div className="px-4 py-6 lg:py-20 flex flex-col w-screen items-center bg-white">
+            <div className="px-4 py-6 lg:py-20 flex flex-col items-center bg-white">
               <div className="container lg:max-w-6xl flex flex-col gap-6">
                 <h1 className="text-4xl lg:text-5xl lg:max-w-xl font-bold text-slate-900 leading-10">
                   Construye tu próximo CV profesional en cinco minutos
