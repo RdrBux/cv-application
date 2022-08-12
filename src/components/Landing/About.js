@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export class About extends Component {
   render() {
     return (
-      <section className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-4 lg:px-0 py-20 gap-5 container lg:max-w-6xl">
+      <section className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-4 py-16 lg:py-24 gap-5 container lg:max-w-6xl">
         <img
-          className="max-w-lg aspect-square object-cover"
+          className="max-w-lg aspect-square object-cover shadow-2xl rounded-lg"
           src="./img/about-photo.jpg"
           alt=""
         />

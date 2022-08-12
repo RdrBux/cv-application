@@ -23,7 +23,7 @@ export class Hero extends Component {
                 <img className="w-5" src="./img/star.svg" alt="star" />
                 <img className="w-5" src="./img/star.svg" alt="star" />
               </div>
-              <p className="text-center text-slate-700 max-w-md font-medium">
+              <p className="text-center lg:text-left text-slate-700 max-w-md font-medium">
                 “Con $$NAME$$ logré hacer mi CV en minutos desde el celular y
                 conseguí mi primera entrevista en un día.”
               </p>
@@ -34,7 +34,7 @@ export class Hero extends Component {
             </div>
           </div>
           <div className="px-4 py-6 lg:py-20 flex flex-col items-center bg-white">
-            <div className="container lg:max-w-6xl flex flex-col gap-6">
+            <div className="px-4 container lg:max-w-6xl flex flex-col gap-6">
               <h1 className="text-4xl lg:text-5xl lg:max-w-xl font-bold text-slate-900 leading-10">
                 Construye tu próximo CV profesional en cinco minutos
               </h1>
