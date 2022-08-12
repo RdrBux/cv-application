@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Newsletter extends Component {
   render() {
     return (
-      <section className="bg-indigo-900 text-white">
+      <section className="bg-indigo-900 text-white" id="newsletter">
         <div className="px-4 py-8 lg:py-24 flex flex-col lg:flex-row lg:items-center lg:gap-12 container lg:max-w-6xl">
           <div>
             <h2 className="font-bold text-3xl lg:text-4xl">
@@ -24,10 +24,14 @@ export class Newsletter extends Component {
                   type="email"
                   id="email"
                 />
-                <button className="bg-white text-indigo-900 font-bold px-4 rounded-r-lg">
+                <button className="bg-white text-indigo-900 font-bold px-4 rounded-r-lg hover:bg-indigo-200">
                   ENVIAR
                 </button>
               </div>
+              <p className="text-xs mt-4 text-indigo-200">
+                * $$NAME$$ se compromete a no enviar ningún correo adicional o
+                no deseado.
+              </p>
             </form>
           </div>
           <div className="mt-10 flex gap-5 overflow-hidden -mr-4">

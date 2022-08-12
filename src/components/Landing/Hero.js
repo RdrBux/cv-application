@@ -43,11 +43,11 @@ export class Hero extends Component {
                 para que tu Curriculum Vitae destaque sobre toda la competencia.
               </p>
               <div className="flex gap-3">
-                <button className="px-4 py-3 bg-indigo-900 font-bold text-sm lg:text-base text-white rounded-lg">
+                <button className="px-4 py-3 bg-indigo-900 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-700">
                   Crea tu CV
                 </button>
-                <button className="px-4 py-3 text-indigo-900 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-900">
-                  Plantillas Premium
+                <button className="px-4 py-3 text-indigo-900 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-900 shadow hover:bg-slate-200">
+                  <a href="#newsletter">Plantillas Premium</a>
                 </button>
               </div>
             </div>

@@ -11,7 +11,7 @@ export class About extends Component {
         />
         <div className="flex flex-col gap-5">
           <div className="flex justify-start p-3 bg-indigo-900 rounded-lg w-fit">
-            <img className="w-5" src="./img/social.svg" alt="" />
+            <img className="w-5 shadow" src="./img/social.svg" alt="" />
           </div>
           <h2 className="text-slate-900 font-bold text-3xl lg:text-4xl">
             ¿Por qué elegirnos?

@@ -13,7 +13,7 @@ export class Faq extends Component {
           <span className="font-bold text-indigo-900">correo electrónico</span>.
         </p>
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-4 lg:mt-10 text-slate-900">
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">¿El uso de las plantillas es gratuito?</p>
             <p>
               Las plantillas disponibles en el Creador de CV son gratuitas.
@@ -21,7 +21,7 @@ export class Faq extends Component {
               cuales requieren un pago para su uso.
             </p>
           </div>
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">
               ¿Cómo creo una plantilla con mi información?
             </p>
@@ -31,7 +31,7 @@ export class Faq extends Component {
               obtener una vista previa a medida que completas los datos
             </p>
           </div>
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">¿Cómo obtengo el CV?</p>
             <p>
               Tras haber completado todos los datos, podrás descargar tu CV
@@ -41,7 +41,7 @@ export class Faq extends Component {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-8 text-slate-900 hidden lg:flex">
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">¿En qué formato se obtiene el CV?</p>
             <p>
               Todos los CVs son descargables en formato PDF. Es el formato más
@@ -49,7 +49,7 @@ export class Faq extends Component {
               dispositivo sin modificar la apariencia de los mismos.
             </p>
           </div>
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">
               ¿Se puede editar el CV una vez descargado?
             </p>
@@ -60,7 +60,7 @@ export class Faq extends Component {
               quieres corregir algo.
             </p>
           </div>
-          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg">
+          <div className="flex flex-col gap-2  lg:max-w-xs bg-indigo-100 p-4 rounded-lg shadow-md">
             <p className="font-bold">
               ¿Almacenan la información de las personas que emplean el servicio?
             </p>
