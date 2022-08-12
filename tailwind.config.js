@@ -9,6 +9,9 @@ module.exports = {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
     },
+    container: {
+      center: true,
+    },
   },
   plugins: [],
 };
