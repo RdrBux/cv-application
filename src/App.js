@@ -1,4 +1,5 @@
 import About from './components/Landing/About';
+import Blog from './components/Landing/Blog';
 import Faq from './components/Landing/Faq';
 import Footer from './components/Landing/Footer';
 import Hero from './components/Landing/Hero';
@@ -11,7 +12,7 @@ function App() {
       <Hero />
       <About />
       <Testimonial />
-      <Faq />
+      <Blog />
       <Newsletter />
       <Footer />
     </div>
