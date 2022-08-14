@@ -5,12 +5,11 @@ export class Hero extends Component {
     return (
       <div className="relative bg-slate-100 w-full">
         <div className="absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
-        <div className="flex flex-col container lg:max-w-6xl items-center relative">
+        <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12">
           <img
-            className=" z-20 lg:absolute lg:right-0"
+            className=" z-20 lg:absolute lg:right-0 shadow-2xl w-72 lg:w-1/3"
             src="./img/hero-cv.png"
             alt="CV Example."
-            width="500"
           />
         </div>
         <div className="w-full">
