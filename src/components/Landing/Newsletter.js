@@ -13,9 +13,10 @@ export class Newsletter extends Component {
               Plantillas Premium - PROXIMAMENTE
             </h2>
             <p className="leading-6 font-light text-slate-300 lg:text-lg mt-4 lg:mt-6 max-w-2xl">
-              Ingresa tu correo electrónico para recibir notificaciones tan
-              pronto como se encuentren disponibles nuestras nuevas{' '}
-              <span className="font-semibold">Plantillas Premium</span>.
+              El CV de tus sueños, ajustando paso a paso cada detalle por
+              nosotros hasta alcanzar la perfección. Ingresa tu correo
+              electrónico para recibir notificaciones tan pronto como se
+              encuentre disponible el servicio.
             </p>
             <form className="mt-4 lg:mt-6">
               <label className="font-bold lg:text-xl" htmlFor="email">
@@ -40,17 +41,17 @@ export class Newsletter extends Component {
           <div className="mt-10 flex gap-5 overflow-hidden -mr-4">
             <img
               className="w-1/3 lg:w-52"
-              src="./img/premium-cv1.svg"
+              src="./img/cd-blur-2.jpg"
               alt="Premium CV"
             />
             <img
               className="w-1/3 lg:w-52"
-              src="./img/premium-cv1.svg"
+              src="./img/cd-blur-3.jpg"
               alt="Premium CV"
             />
             <img
               className="w-1/3 lg:w-52"
-              src="./img/premium-cv1.svg"
+              src="./img/cd-blur-1.jpg"
               alt="Premium CV"
             />
           </div>
