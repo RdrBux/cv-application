@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Hero extends Component {
   render() {
     return (
-      <div className="relative bg-slate-200 w-full">
+      <div className="relative bg-slate-100 w-full">
         <div className="absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
         <div className="flex flex-col container lg:max-w-6xl items-center relative">
           <img
@@ -43,11 +43,11 @@ export class Hero extends Component {
                 para que tu Curriculum Vitae destaque sobre toda la competencia.
               </p>
               <div className="flex gap-3">
-                <button className="px-5 py-3 bg-indigo-900 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-700">
+                <button className="px-5 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900">
                   Crea tu CV
                 </button>
                 <a href="#newsletter">
-                  <button className="px-5 py-3 text-indigo-900 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-900 shadow hover:bg-slate-200">
+                  <button className="px-5 py-3 text-indigo-700 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-700 shadow hover:bg-slate-200">
                     Plantillas Premium
                   </button>
                 </a>

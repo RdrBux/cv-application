@@ -8,7 +8,7 @@ export class Blog extends Component {
           Consejos en la elaboración de tu{' '}
           <span className="text-indigo-700">Curriculum Vitae</span>
         </h2>
-        <div className="flex flex-col gap-5 mt-5 lg:mt-10 text-slate-800 text-sm lg:text-base lg:w-3/4">
+        <div className="flex flex-col gap-5 mt-5 lg:mt-10 text-slate-700 text-sm lg:text-lg lg:w-3/4">
           <p>
             <strong>Sé breve y directo,</strong> considera colocar solo la
             información relevante para el puesto y nunca excedas una página.
