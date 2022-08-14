@@ -1,20 +1,23 @@
-import About from './components/Landing/About';
+/* import About from './components/Landing/About';
 import Blog from './components/Landing/Blog';
-/* import Faq from './components/Landing/Faq'; */
+import Faq from './components/Landing/Faq';
 import Footer from './components/Landing/Footer';
 import Hero from './components/Landing/Hero';
 import Newsletter from './components/Landing/Newsletter';
-import Testimonial from './components/Landing/Testimonial';
+import Testimonial from './components/Landing/Testimonial'; */
+
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
-      <Hero />
+      <Form />
+      {/* <Hero />
       <About />
       <Testimonial />
       <Blog />
       <Newsletter />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
