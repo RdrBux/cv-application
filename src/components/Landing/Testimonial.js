@@ -4,8 +4,18 @@ export class Testimonial extends Component {
   render() {
     return (
       <div className="p-4">
-        <section className="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-1 lg:p-16 py-4 gap-8 container lg:max-w-6xl rounded-lg shadow-2xl">
-          <div className="flex flex-col items-center lg:items-start gap-4 lg:w-10/12">
+        <section className="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-1 lg:p-16 py-8 gap-8 container lg:max-w-6xl rounded-lg shadow-2xl relative">
+          <img
+            className="absolute opacity-10 top-3 left-10"
+            src="./img/quote-start.svg"
+            alt=""
+          />
+          <img
+            className="absolute opacity-10 bottom-3 right-10"
+            src="./img/quote-end.svg"
+            alt=""
+          />
+          <div className="flex flex-col items-center lg:items-start gap-4 lg:w-10/12 z-10">
             <div className="flex gap-1">
               <img className="w-5" src="./img/star-gold.svg" alt="star" />
               <img className="w-5" src="./img/star-gold.svg" alt="star" />

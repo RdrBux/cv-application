@@ -3,16 +3,19 @@ import React, { Component } from 'react';
 export class Newsletter extends Component {
   render() {
     return (
-      <section className="bg-indigo-900 text-white" id="newsletter">
+      <section className="bg-indigo-900 text-white relative" id="newsletter">
+        <div className="absolute text-9xl font-black opacity-5 text-indigo-300 right-3">
+          PREMIUM
+        </div>
         <div className="px-4 py-8 lg:py-24 flex flex-col lg:flex-row lg:items-center lg:gap-12 container lg:max-w-6xl">
           <div>
             <h2 className="font-bold text-3xl lg:text-4xl">
               Plantillas Premium - PROXIMAMENTE
             </h2>
-            <p className="leading-6 font-light lg:text-xl mt-4 lg:mt-6 max-w-2xl">
+            <p className="leading-6 font-light text-slate-300 lg:text-lg mt-4 lg:mt-6 max-w-2xl">
               Ingresa tu correo electrónico para recibir notificaciones tan
               pronto como se encuentren disponibles nuestras nuevas{' '}
-              <span className="font-bold">Plantillas Premium</span>.
+              <span className="font-semibold">Plantillas Premium</span>.
             </p>
             <form className="mt-4 lg:mt-6">
               <label className="font-bold lg:text-xl" htmlFor="email">

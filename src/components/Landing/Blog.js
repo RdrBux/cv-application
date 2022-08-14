@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 export class Blog extends Component {
   render() {
     return (
-      <section className="px-4 py-16 lg:py-24 container lg:max-w-6xl">
+      <section className="px-4 py-16 lg:py-24 container lg:max-w-6xl relative">
+        <div className="absolute text-9xl font-black opacity-5 right-3">
+          CONSEJOS
+        </div>
         <h2 className="text-slate-900 font-bold text-3xl lg:text-4xl lg:w-1/2">
           Consejos en la elaboración de tu{' '}
           <span className="text-indigo-700">Curriculum Vitae</span>
         </h2>
-        <div className="flex flex-col gap-5 mt-5 lg:mt-10 text-slate-700 text-sm lg:text-lg lg:w-3/4">
+        <div className="flex flex-col gap-5 mt-5 lg:mt-10 text-slate-700 text-sm lg:text-lg lg:w-7/12">
           <p>
             <strong>Sé breve y directo,</strong> considera colocar solo la
             información relevante para el puesto y nunca excedas una página.
