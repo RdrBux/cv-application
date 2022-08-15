@@ -31,15 +31,50 @@ export class Form extends Component {
   job() {
     const newID = nanoid();
     this.setState({
-      jobs: this.state.jobs.concat(
-        <Job key={newID} id={newID} remove={() => this.removeJob(newID)} />
-      ),
+      jobs: this.state.jobs.concat({
+        id: newID,
+        place: '',
+        rol: '',
+        description: '',
+        datestart: '',
+        dateend: '',
+        city: '',
+        country: '',
+      }),
     });
+  }
+
+  renderJobs() {
+    const jobsList = this.state.jobs.map((job) => (
+      <Job
+        key={job.id}
+        remove={() => this.removeJob(job.id)}
+        handleChange={(e) => this.handleChangeJob(e, job.id)}
+        id={job.id}
+        place={job.place}
+        rol={job.rol}
+        description={job.description}
+        datestart={job.datestart}
+        dateend={job.dateend}
+        city={job.city}
+        country={job.country}
+      />
+    ));
+    return jobsList;
   }
 
   removeJob(id) {
     this.setState({
-      jobs: this.state.jobs.filter((job) => job.props.id !== id),
+      jobs: this.state.jobs.filter((job) => job.id !== id),
+    });
+  }
+
+  handleChangeJob(e, id) {
+    console.log(e.target.id, ' ', e.target.value, ' ', id);
+    this.setState({
+      jobs: this.state.jobs.map((job) =>
+        job.id === id ? { ...job, [e.target.id]: e.target.value } : { ...job }
+      ),
     });
   }
 
@@ -186,7 +221,7 @@ export class Form extends Component {
                 Experiencia Laboral
               </h2>
               <div>
-                {this.state.jobs}
+                {this.renderJobs()}
                 <button
                   className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
                   onClick={() => this.job()}
