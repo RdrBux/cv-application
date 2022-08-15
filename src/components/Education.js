@@ -3,7 +3,8 @@ import Input from './Input';
 
 export class Education extends Component {
   render() {
-    const { remove } = this.props;
+    const { remove, handleChange, college, career, yearstart, yearend } =
+      this.props;
     return (
       <div className="border rounded-lg p-4 mt-4">
         <div className="flex justify-between items-center">
@@ -15,10 +16,34 @@ export class Education extends Component {
             X
           </button>
         </div>
-        <Input title="Universidad" id="college" type="text" />
-        <Input title="Carrera Universitaria" id="career" type="text" />
-        <Input title="Año de inicio" id="yearstart" type="number" />
-        <Input title="Año de finalización" id="yearend" type="number" />
+        <Input
+          title="Universidad"
+          id="college"
+          type="text"
+          value={college}
+          onChange={handleChange}
+        />
+        <Input
+          title="Carrera Universitaria"
+          id="career"
+          type="text"
+          value={career}
+          onChange={handleChange}
+        />
+        <Input
+          title="Año de inicio"
+          id="yearstart"
+          type="number"
+          value={yearstart}
+          onChange={handleChange}
+        />
+        <Input
+          title="Año de finalización"
+          id="yearend"
+          type="number"
+          value={yearend}
+          onChange={handleChange}
+        />
       </div>
     );
   }

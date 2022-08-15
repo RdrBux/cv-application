@@ -70,7 +70,6 @@ export class Form extends Component {
   }
 
   handleChangeJob(e, id) {
-    console.log(e.target.id, ' ', e.target.value, ' ', id);
     this.setState({
       jobs: this.state.jobs.map((job) =>
         job.id === id ? { ...job, [e.target.id]: e.target.value } : { ...job }
@@ -81,19 +80,43 @@ export class Form extends Component {
   education() {
     const newID = nanoid();
     this.setState({
-      education: this.state.education.concat(
-        <Education
-          key={newID}
-          id={newID}
-          remove={() => this.removeEducation(newID)}
-        />
-      ),
+      education: this.state.education.concat({
+        id: newID,
+        college: '',
+        career: '',
+        yearstart: 2015,
+        yearend: 2020,
+      }),
     });
+  }
+
+  renderEducation() {
+    const educationList = this.state.education.map((ed) => (
+      <Education
+        key={ed.id}
+        remove={() => this.removeEducation(ed.id)}
+        handleChange={(e) => this.handleChangeEd(e, ed.id)}
+        id={ed.id}
+        college={ed.college}
+        career={ed.career}
+        yearstart={ed.yearstart}
+        yearend={ed.yearend}
+      />
+    ));
+    return educationList;
   }
 
   removeEducation(id) {
     this.setState({
-      education: this.state.education.filter((ed) => ed.props.id !== id),
+      education: this.state.education.filter((ed) => ed.id !== id),
+    });
+  }
+
+  handleChangeEd(e, id) {
+    this.setState({
+      education: this.state.education.map((ed) =>
+        ed.id === id ? { ...ed, [e.target.id]: e.target.value } : { ...ed }
+      ),
     });
   }
 
@@ -251,7 +274,7 @@ export class Form extends Component {
                   value={this.state.extra.skills}
                   onChange={(e) => this.handleChangeExtra(e)}
                 />
-                {this.state.education}
+                {this.renderEducation()}
                 <button
                   className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
                   onClick={() => this.education()}
