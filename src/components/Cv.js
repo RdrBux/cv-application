@@ -12,6 +12,7 @@ export class Cv extends Component {
           <div>{personal.webpage || 'webpage'}</div>
           <div>{personal.mail || 'mail'}</div>
           <div>{personal.phone || 'phone'}</div>
+          <div>{personal.linkedin || 'linkedin'}</div>
         </div>
         <div>
           Extra

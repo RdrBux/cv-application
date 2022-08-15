@@ -4,8 +4,8 @@ import Input from './Input';
 export class Education extends Component {
   render() {
     return (
-      <div>
-        <h3>Carrera</h3>
+      <div className="border rounded-lg p-4 mt-4">
+        <h3 className="font-bold text-xl text-slate-900">Estudios</h3>
         <Input title="Universidad" id="college" type="text" />
         <Input title="Carrera Universitaria" id="career" type="text" />
         <Input title="Año de inicio" id="yearstart" type="number" />

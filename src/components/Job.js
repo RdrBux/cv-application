@@ -4,8 +4,8 @@ import Input from './Input';
 export class Job extends Component {
   render() {
     return (
-      <div>
-        <h3>Trabajo</h3>
+      <div className="border rounded-lg p-4 mt-4">
+        <h3 className="font-bold text-xl text-slate-900">Trabajo</h3>
         <Input title="Empresa" id="place" type="text" />
         <Input title="Rol" id="rol" type="text" />
         <Input title="Descripción de tareas" id="description" type="text" />
