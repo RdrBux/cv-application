@@ -15,9 +15,9 @@ export class Form extends Component {
       personal: {
         name: '',
         profession: '',
-        /* webpage: '',
+        webpage: '',
         mail: '',
-        phone: '', */
+        phone: '',
       },
       extra: {
         personal: '',
@@ -38,8 +38,16 @@ export class Form extends Component {
     });
   }
 
-  handleName(e) {
-    this.setState({ personal: { name: e.target.value } });
+  handleChangePersonal(e) {
+    this.setState({
+      personal: { ...this.state.personal, [e.target.id]: e.target.value },
+    });
+  }
+
+  handleChangeExtra(e) {
+    this.setState({
+      extra: { ...this.state.extra, [e.target.id]: e.target.value },
+    });
   }
 
   render() {
@@ -53,44 +61,36 @@ export class Form extends Component {
               id="name"
               type="text"
               value={this.state.personal.name}
-              onChange={(e) => this.handleName(e)}
+              onChange={(e) => this.handleChangePersonal(e)}
             />
             <Input
               title="Profesión"
               id="profession"
               type="text"
               value={this.state.personal.profession}
-              onChange={({ target }) =>
-                this.setState({ personal: { profession: target.value } })
-              }
+              onChange={(e) => this.handleChangePersonal(e)}
             />
-            {/* <Input
+            <Input
               title="Página web"
               id="webpage"
               type="text"
-              value={this.props.personal.webpage}
-              onChange={({ target }) =>
-                this.setState({ personal: { webpage: target.value } })
-              }
+              value={this.state.personal.webpage}
+              onChange={(e) => this.handleChangePersonal(e)}
             />
             <Input
               title="Email"
               id="mail"
               type="email"
-              value={this.props.personal.mail}
-              onChange={({ target }) =>
-                this.setState({ personal: { mail: target.value } })
-              }
+              value={this.state.personal.mail}
+              onChange={(e) => this.handleChangePersonal(e)}
             />
             <Input
               title="Teléfono"
               id="phone"
               type="text"
-              value={this.props.personal.phone}
-              onChange={({ target }) =>
-                this.setState({ phone: { phone: target.value } })
-              }
-            /> */}
+              value={this.state.personal.phone}
+              onChange={(e) => this.handleChangePersonal(e)}
+            />
           </div>
         </div>
         <div>
@@ -103,11 +103,19 @@ export class Form extends Component {
         <div>
           <h2 className="font-bold text-xl">Información Adicional</h2>
           <div>
-            <Input title="Descripción personal" id="personal" type="text" />
+            <Input
+              title="Descripción personal"
+              id="personal"
+              type="text"
+              value={this.state.extra.personal}
+              onChange={(e) => this.handleChangeExtra(e)}
+            />
             <Input
               title="Habilidades (separadas con coma)"
               id="skills"
               type="text"
+              value={this.state.extra.skills}
+              onChange={(e) => this.handleChangeExtra(e)}
             />
             {this.state.education}
             <button onClick={() => this.education()}>Agregar estudios</button>
@@ -116,7 +124,7 @@ export class Form extends Component {
         <div>
           <ReactToPrint
             trigger={() => {
-              return <a href="#">Print this out!</a>;
+              return <button>Print this out!</button>;
             }}
             content={() => this.componentRef}
           />
