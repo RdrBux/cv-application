@@ -4,9 +4,9 @@ export class Cv extends Component {
   render() {
     const { personal, extra } = this.props.state;
     return (
-      <>
+      <div className="p-4">
         <div>
-          Personal
+          <p className="font-bold">Personal</p>
           <div>{personal.name || 'name'}</div>
           <div>{personal.profession || 'profession'}</div>
           <div>{personal.webpage || 'webpage'}</div>
@@ -15,11 +15,11 @@ export class Cv extends Component {
           <div>{personal.linkedin || 'linkedin'}</div>
         </div>
         <div>
-          Extra
+          <p className="font-bold">Extra</p>
           <div>{extra.personal || 'about me'}</div>
           <div>{extra.skills || 'skills'}</div>
         </div>
-      </>
+      </div>
     );
   }
 }

@@ -11,8 +11,8 @@ export class Form extends Component {
     super();
     this.state = {
       active: 'personal',
-      jobs: [<Job key={nanoid()} />],
-      education: [<Education key={nanoid()} />],
+      jobs: [],
+      education: [],
       personal: {
         name: '',
         profession: '',
@@ -29,14 +29,36 @@ export class Form extends Component {
   }
 
   job() {
+    const newID = nanoid();
     this.setState({
-      jobs: this.state.jobs.concat(<Job key={nanoid()} />),
+      jobs: this.state.jobs.concat(
+        <Job key={newID} id={newID} remove={() => this.removeJob(newID)} />
+      ),
+    });
+  }
+
+  removeJob(id) {
+    this.setState({
+      jobs: this.state.jobs.filter((job) => job.props.id !== id),
     });
   }
 
   education() {
+    const newID = nanoid();
     this.setState({
-      education: this.state.education.concat(<Education key={nanoid()} />),
+      education: this.state.education.concat(
+        <Education
+          key={newID}
+          id={newID}
+          remove={() => this.removeEducation(newID)}
+        />
+      ),
+    });
+  }
+
+  removeEducation(id) {
+    this.setState({
+      education: this.state.education.filter((ed) => ed.props.id !== id),
     });
   }
 
@@ -169,7 +191,9 @@ export class Form extends Component {
                   className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
                   onClick={() => this.job()}
                 >
-                  Agregar otro trabajo
+                  {this.state.jobs.length === 0
+                    ? 'Agregar trabajo'
+                    : 'Agregar otro trabajo'}
                 </button>
               </div>
             </div>
@@ -197,7 +221,9 @@ export class Form extends Component {
                   className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
                   onClick={() => this.education()}
                 >
-                  Agregar otros estudios
+                  {this.state.education.length === 0
+                    ? 'Agregar estudios'
+                    : 'Agregar otros estudios'}
                 </button>
               </div>
             </div>
@@ -222,13 +248,17 @@ export class Form extends Component {
           </div>
         </div>
         <div className="lg:w-1/2">
+          <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
           <ReactToPrint
             trigger={() => {
-              return <button>Print this out!</button>;
+              return (
+                <button className="ml-4 p-4 rounded-lg mt-4 text-sm font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900">
+                  Descargar CV
+                </button>
+              );
             }}
             content={() => this.componentRef}
           />
-          <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
         </div>
       </div>
     );
