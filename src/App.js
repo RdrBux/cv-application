@@ -5,21 +5,23 @@ import Footer from './components/Landing/Footer';
 import Hero from './components/Landing/Hero';
 import Newsletter from './components/Landing/Newsletter';
 import Testimonial from './components/Landing/Testimonial'; */
-
+import React, { Component } from 'react';
 import Form from './components/Form';
 
-function App() {
-  return (
-    <div className="App">
-      <Form />
-      {/* <Hero />
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Form />
+        {/* <Hero />
       <About />
       <Testimonial />
       <Blog />
       <Newsletter />
       <Footer /> */}
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
