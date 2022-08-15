@@ -71,8 +71,8 @@ export class Form extends Component {
 
   render() {
     return (
-      <div className="p-4 container lg:max-w-7xl flex">
-        <div className="w-1/2">
+      <div className="p-4 container lg:max-w-7xl lg:flex">
+        <div className="lg:w-1/2">
           <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
             <button
               className={
@@ -221,7 +221,7 @@ export class Form extends Component {
             </button>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <ReactToPrint
             trigger={() => {
               return <button>Print this out!</button>;
