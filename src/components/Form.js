@@ -246,7 +246,7 @@ export class Form extends Component {
               <div>
                 {this.renderJobs()}
                 <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
+                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
                   onClick={() => this.job()}
                 >
                   {this.state.jobs.length === 0
@@ -276,7 +276,7 @@ export class Form extends Component {
                 />
                 {this.renderEducation()}
                 <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 shadow hover:bg-indigo-200"
+                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
                   onClick={() => this.education()}
                 >
                   {this.state.education.length === 0

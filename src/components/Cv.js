@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CvEd from './CvEd';
+import CvJob from './CvJob';
 
 export class Cv extends Component {
   render() {
@@ -27,8 +29,85 @@ export class Cv extends Component {
         </div>
       );
     });
+
     return (
-      <div className="p-4">
+      <div className="font-inter text-black p-10 border grid grid-cols-3 w-[792px] h-[1120px] scale-[25%]">
+        <div className="flex flex-col justify-between">
+          <div>
+            <div className="font-bold text-4xl leading-8 border-b-4 pb-3 h-20 flex flex-col justify-end tracking-tighter pr-3">
+              <h1 className="">{personal.name || 'John Doe'}</h1>
+            </div>
+            <div className="pr-3">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-2xl mt-10">
+                sobre mí
+              </h2>
+              <p className="text-[10px] mt-3 text-gray-600">{extra.personal}</p>
+            </div>
+            <div className="pr-3">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-2xl mt-10">
+                educación
+              </h2>
+              {education.map((ed) => (
+                <CvEd
+                  yearstart={ed.yearstart}
+                  yearend={ed.yearend}
+                  career={ed.career}
+                  college={ed.college}
+                />
+              ))}
+            </div>
+            <div className="pr-3">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-2xl mt-10">
+                habilidades
+              </h2>
+              <p className="text-xs mt-3">{extra.skills}</p>
+            </div>
+          </div>
+          <div className="border-t-4 text-[10px] pt-2">
+            <p>{personal.webpage}</p>
+          </div>
+        </div>
+        <div className="col-span-2 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between">
+              <div className="font-bold text-sm leading-3 border-b-4 pb-3 h-20 w-full flex flex-col justify-end tracking-tight px-3">
+                <p className="">{personal.profession || 'Web Designer'}</p>
+              </div>
+              <div className="border-b-4 pb-3 h-full h-20 flex flex-col gap-1 justify-end text-[10px] leading-[0.88em] tracking-tighter pl-3">
+                <div>{personal.webpage || 'www.johndoe.com'}</div>
+                <div>{personal.mail || 'john.doe@gmail.com'}</div>
+                <div>{personal.linkedin || 'John Doe'}</div>
+              </div>
+            </div>
+            <div className="pl-3 mt-4">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-2xl mt-10">
+                experiencia laboral
+              </h2>
+              {jobs.map((job) => (
+                <CvJob
+                  place={job.place}
+                  datestart={job.datestart}
+                  dateend={job.dateend}
+                  city={job.city}
+                  country={job.country}
+                  rol={job.rol}
+                  description={job.description}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="border-t-4 text-[10px] pt-2 flex">
+            <p className="w-1/2">{personal.mail}</p>
+            <p className="w-1/2">{personal.linkedin}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Cv;
+/* 
         <div>
           <p className="font-bold">Personal</p>
           <div>{personal.name || 'name'}</div>
@@ -50,10 +129,4 @@ export class Cv extends Component {
         <div>
           <p className="font-bold">Education</p>
           {edList}
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Cv;
+        </div> */
