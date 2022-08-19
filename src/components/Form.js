@@ -286,7 +286,7 @@ export class Form extends Component {
               </div>
             </div>
           </div>
-          <div className="flex justify-center text-xl text-slate-700 mt-4">
+          <div className="flex justify-center text-xl text-slate-700 my-4">
             <button
               className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100"
               onClick={() =>
@@ -305,18 +305,20 @@ export class Form extends Component {
             </button>
           </div>
         </div>
-        <div className="lg:w-1/2">
-          <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
-          <ReactToPrint
-            trigger={() => {
-              return (
-                <button className="ml-4 p-4 rounded-lg mt-4 text-sm font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900">
-                  Descargar CV
-                </button>
-              );
-            }}
-            content={() => this.componentRef}
-          />
+        <div className="lg:w-1/2 lg:px-4 max-h-screen">
+          <div className="scale-[40%] -translate-x-1/4 -translate-y-1/4">
+            <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
+            <ReactToPrint
+              trigger={() => {
+                return (
+                  <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900">
+                    Descargar CV
+                  </button>
+                );
+              }}
+              content={() => this.componentRef}
+            />
+          </div>
         </div>
       </div>
     );
