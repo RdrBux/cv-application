@@ -5,9 +5,9 @@ export class CvJob extends Component {
     const { place, datestart, dateend, city, country, rol, description } =
       this.props;
     return (
-      <div className="flex mt-3 text-[10px] text-gray-600 tracking-tight border-b-2 pb-2">
+      <div className="flex mt-3 text-sm text-gray-600 tracking-tight border-b-2 pb-2">
         <div className="w-1/2">
-          <p className="text-xs font-bold text-black">{place}</p>
+          <p className="text-base font-bold text-black">{place}</p>
           <p>
             {datestart} - {dateend}
           </p>
@@ -16,7 +16,7 @@ export class CvJob extends Component {
           </p>
         </div>
         <div className="w-1/2">
-          <p className="text-xs text-black">{rol}</p>
+          <p className="text-base text-black">{rol}</p>
           <p>{description}</p>
         </div>
       </div>
