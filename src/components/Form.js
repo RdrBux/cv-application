@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Job from './Job';
+import Course from './Course';
 import Education from './Education';
 import Input from './Input';
-import Job from './Job';
 import { nanoid } from 'nanoid';
 import ReactToPrint from 'react-to-print';
 import Cv from './Cv';
@@ -14,6 +15,7 @@ export class Form extends Component {
       active: 'personal',
       jobs: [],
       education: [],
+      courses: [],
       personal: {
         name: '',
         profession: '',
@@ -74,6 +76,57 @@ export class Form extends Component {
     this.setState({
       jobs: this.state.jobs.map((job) =>
         job.id === id ? { ...job, [e.target.id]: e.target.value } : { ...job }
+      ),
+    });
+  }
+
+  course() {
+    const newID = nanoid();
+    this.setState({
+      courses: this.state.courses.concat({
+        id: newID,
+        institute: '',
+        title: '',
+        description: '',
+        datestart: '',
+        dateend: '',
+        city: '',
+        country: '',
+      }),
+    });
+  }
+
+  renderCourses() {
+    const coursesList = this.state.courses.map((course) => (
+      <Course
+        key={course.id}
+        remove={() => this.removeCourse(course.id)}
+        handleChange={(e) => this.handleChangeCourse(e, course.id)}
+        id={course.id}
+        institute={course.institute}
+        title={course.title}
+        description={course.description}
+        datestart={course.datestart}
+        dateend={course.dateend}
+        city={course.city}
+        country={course.country}
+      />
+    ));
+    return coursesList;
+  }
+
+  removeCourse(id) {
+    this.setState({
+      courses: this.state.courses.filter((course) => course.id !== id),
+    });
+  }
+
+  handleChangeCourse(e, id) {
+    this.setState({
+      courses: this.state.courses.map((course) =>
+        course.id === id
+          ? { ...course, [e.target.id]: e.target.value }
+          : { ...course }
       ),
     });
   }
@@ -253,6 +306,20 @@ export class Form extends Component {
                   {this.state.jobs.length === 0
                     ? 'Agregar trabajo'
                     : 'Agregar otro trabajo'}
+                </button>
+              </div>
+              <h2 className="font-bold text-2xl text-slate-900 mt-10">
+                Formación adicional
+              </h2>
+              <div>
+                {this.renderCourses()}
+                <button
+                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
+                  onClick={() => this.course()}
+                >
+                  {this.state.courses.length === 0
+                    ? 'Agregar curso'
+                    : 'Agregar otros cursos'}
                 </button>
               </div>
             </div>

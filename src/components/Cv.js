@@ -4,7 +4,7 @@ import CvJob from './CvJob';
 
 export class Cv extends Component {
   render() {
-    const { personal, extra, jobs, education } = this.props.state;
+    const { personal, extra, jobs, courses, education } = this.props.state;
 
     return (
       <div className="font-inter text-black p-10 border grid grid-cols-3 w-[792px] h-[1120px]">
@@ -98,15 +98,15 @@ export class Cv extends Component {
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
                 formación adicional
               </h2>
-              {jobs.map((job) => (
+              {courses.map((course) => (
                 <CvJob
-                  place={job.place}
-                  datestart={job.datestart}
-                  dateend={job.dateend}
-                  city={job.city}
-                  country={job.country}
-                  rol={job.rol}
-                  description={job.description}
+                  place={course.institute}
+                  datestart={course.datestart}
+                  dateend={course.dateend}
+                  city={course.city}
+                  country={course.country}
+                  rol={course.title}
+                  description={course.description}
                 />
               ))}
             </div>
