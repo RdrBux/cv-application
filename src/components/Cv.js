@@ -39,11 +39,11 @@ export class Cv extends Component {
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
                 habilidades
               </h2>
-              <p className="text-base mt-3">{extra.skills}</p>
+              <p className="text-base mt-3 pr-2">{extra.skills}</p>
             </div>
           </div>
           <div className="border-t-4 text-xs pt-2">
-            <p>{personal.webpage}</p>
+            <p>{personal.webpage || personal.name}</p>
           </div>
         </div>
         <div className="col-span-2 flex flex-col justify-between">
@@ -95,7 +95,7 @@ export class Cv extends Component {
             </div>
           </div>
           <div className="border-t-4 text-xs pt-2 flex">
-            <p className="w-1/2">{personal.mail}</p>
+            <p className="w-1/2">{personal.mail || 'gonzalez@gmail.com'}</p>
             <p className="w-1/2">{personal.linkedin}</p>
           </div>
         </div>
