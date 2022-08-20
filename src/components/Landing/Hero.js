@@ -24,8 +24,8 @@ export class Hero extends Component {
                 <img className="w-5" src="./img/star.svg" alt="star" />
               </div>
               <p className="text-center lg:text-left text-slate-700 max-w-md font-medium">
-                “Con CV Design logré hacer mi CV en minutos desde el celular y
-                conseguí mi primera entrevista en un día.”
+                “Con CV Design logré hacer mi Curriculum Vitae en minutos desde
+                el celular y conseguí mi primera entrevista en un día.”
               </p>
               <p className="text-center text-xs lg:text-sm text-slate-500">
                 <span className="text-indigo-800">— María Martínez</span>,
@@ -43,12 +43,14 @@ export class Hero extends Component {
                 para que tu Curriculum Vitae destaque sobre toda la competencia.
               </p>
               <div className="flex gap-3">
-                <button
-                  className="px-10 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900 duration-200"
-                  onClick={onClick}
-                >
-                  Crea tu CV
-                </button>
+                <a href="#">
+                  <button
+                    className="px-10 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900 duration-200"
+                    onClick={onClick}
+                  >
+                    Crea tu CV
+                  </button>
+                </a>
                 {/* <a href="#newsletter">
                   <button className="px-5 py-3 text-indigo-700 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-700 shadow hover:bg-slate-100 duration-200">
                     Plantillas Premium

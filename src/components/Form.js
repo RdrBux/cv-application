@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 import ReactToPrint from 'react-to-print';
 import Cv from './Cv';
 import Textarea from './Textarea';
+import NavForm from './NavForm';
 
 export class Form extends Component {
   constructor() {
@@ -205,189 +206,203 @@ export class Form extends Component {
 
   render() {
     return (
-      <div className="p-4 container lg:max-w-7xl lg:flex">
-        <div className="lg:w-1/2">
-          <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
-            <button
-              className={
-                this.state.active === 'personal'
-                  ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
-              }
-              onClick={() => this.setState({ active: 'personal' })}
-            >
-              Información personal
-            </button>
-            <button
-              className={
-                this.state.active === 'laboral'
-                  ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
-              }
-              onClick={() => this.setState({ active: 'laboral' })}
-            >
-              Experiencia laboral
-            </button>
-            <button
-              className={
-                this.state.active === 'extra'
-                  ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
-              }
-              onClick={() => this.setState({ active: 'extra' })}
-            >
-              Información adicional
-            </button>
-          </div>
-          <div className="px-4">
+      <>
+        <NavForm />
+        <div className="p-4 container lg:max-w-6xl lg:flex">
+          <div className="lg:w-1/2">
             <div
-              className={this.state.active === 'personal' ? 'block' : 'hidden'}
+              className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8"
+              id="menu"
             >
-              <h2 className="font-bold text-2xl text-slate-900">
+              <button
+                className={
+                  this.state.active === 'personal'
+                    ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
+                    : 'p-2 border-b-2 hover:border-b-4 duration-200'
+                }
+                onClick={() => this.setState({ active: 'personal' })}
+              >
                 Información personal
-              </h2>
-              <div>
-                <Input
-                  title="Nombre completo"
-                  id="name"
-                  type="text"
-                  value={this.state.personal.name}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-                <Input
-                  title="Profesión"
-                  id="profession"
-                  type="text"
-                  value={this.state.personal.profession}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-                <Input
-                  title="Página web (opcional)"
-                  id="webpage"
-                  type="text"
-                  value={this.state.personal.webpage}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-                <Input
-                  title="Email"
-                  id="mail"
-                  type="email"
-                  value={this.state.personal.mail}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-                <Input
-                  title="Teléfono (opcional)"
-                  id="phone"
-                  type="text"
-                  value={this.state.personal.phone}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-                <Input
-                  title="Linkedin (opcional)"
-                  id="linkedin"
-                  type="text"
-                  value={this.state.personal.linkedin}
-                  onChange={(e) => this.handleChangePersonal(e)}
-                />
-              </div>
-            </div>
-            <div
-              className={this.state.active === 'laboral' ? 'block' : 'hidden'}
-            >
-              <h2 className="font-bold text-2xl text-slate-900">
+              </button>
+              <button
+                className={
+                  this.state.active === 'laboral'
+                    ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
+                    : 'p-2 border-b-2 hover:border-b-4 duration-200'
+                }
+                onClick={() => this.setState({ active: 'laboral' })}
+              >
                 Experiencia laboral
-              </h2>
-              <div>
-                {this.renderJobs()}
-                <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
-                  onClick={() => this.job()}
-                >
-                  {this.state.jobs.length === 0
-                    ? 'Agregar trabajo'
-                    : 'Agregar otro trabajo'}
-                </button>
-              </div>
-              <h2 className="font-bold text-2xl text-slate-900 mt-10">
-                Formación adicional
-              </h2>
-              <div>
-                {this.renderCourses()}
-                <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
-                  onClick={() => this.course()}
-                >
-                  {this.state.courses.length === 0
-                    ? 'Agregar curso'
-                    : 'Agregar otros cursos'}
-                </button>
-              </div>
-            </div>
-            <div className={this.state.active === 'extra' ? 'block' : 'hidden'}>
-              <h2 className="font-bold text-2xl text-slate-900">
+              </button>
+              <button
+                className={
+                  this.state.active === 'extra'
+                    ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
+                    : 'p-2 border-b-2 hover:border-b-4 duration-200'
+                }
+                onClick={() => this.setState({ active: 'extra' })}
+              >
                 Información adicional
-              </h2>
-              <div>
-                <Textarea
-                  title="Descripción personal"
-                  id="personal"
-                  value={this.state.extra.personal}
-                  onChange={(e) => this.handleChangeExtra(e)}
-                />
-                <Input
-                  title="Habilidades (separadas con coma)"
-                  id="skills"
-                  type="text"
-                  value={this.state.extra.skills}
-                  onChange={(e) => this.handleChangeExtra(e)}
-                />
-                {this.renderEducation()}
-                <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
-                  onClick={() => this.education()}
-                >
-                  {this.state.education.length === 0
-                    ? 'Agregar estudios'
-                    : 'Agregar otros estudios'}
-                </button>
+              </button>
+            </div>
+            <div className="px-4">
+              <div
+                className={
+                  this.state.active === 'personal' ? 'block' : 'hidden'
+                }
+              >
+                <h2 className="font-bold text-2xl text-slate-900">
+                  Información personal
+                </h2>
+                <div>
+                  <Input
+                    title="Nombre completo"
+                    id="name"
+                    type="text"
+                    value={this.state.personal.name}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Profesión"
+                    id="profession"
+                    type="text"
+                    value={this.state.personal.profession}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Página web (opcional)"
+                    id="webpage"
+                    type="text"
+                    value={this.state.personal.webpage}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Email"
+                    id="mail"
+                    type="email"
+                    value={this.state.personal.mail}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Teléfono (opcional)"
+                    id="phone"
+                    type="text"
+                    value={this.state.personal.phone}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Linkedin (opcional)"
+                    id="linkedin"
+                    type="text"
+                    value={this.state.personal.linkedin}
+                    onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                </div>
+              </div>
+              <div
+                className={this.state.active === 'laboral' ? 'block' : 'hidden'}
+              >
+                <h2 className="font-bold text-2xl text-slate-900">
+                  Experiencia laboral
+                </h2>
+                <div>
+                  {this.renderJobs()}
+                  <button
+                    className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
+                    onClick={() => this.job()}
+                  >
+                    {this.state.jobs.length === 0
+                      ? 'Agregar trabajo'
+                      : 'Agregar otro trabajo'}
+                  </button>
+                </div>
+                <h2 className="font-bold text-2xl text-slate-900 mt-10">
+                  Formación adicional
+                </h2>
+                <div>
+                  {this.renderCourses()}
+                  <button
+                    className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
+                    onClick={() => this.course()}
+                  >
+                    {this.state.courses.length === 0
+                      ? 'Agregar curso'
+                      : 'Agregar otros cursos'}
+                  </button>
+                </div>
+              </div>
+              <div
+                className={this.state.active === 'extra' ? 'block' : 'hidden'}
+              >
+                <h2 className="font-bold text-2xl text-slate-900">
+                  Información adicional
+                </h2>
+                <div>
+                  <Textarea
+                    title="Descripción personal"
+                    id="personal"
+                    value={this.state.extra.personal}
+                    onChange={(e) => this.handleChangeExtra(e)}
+                  />
+                  <Input
+                    title="Habilidades (separadas con coma)"
+                    id="skills"
+                    type="text"
+                    value={this.state.extra.skills}
+                    onChange={(e) => this.handleChangeExtra(e)}
+                  />
+                  {this.renderEducation()}
+                  <button
+                    className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
+                    onClick={() => this.education()}
+                  >
+                    {this.state.education.length === 0
+                      ? 'Agregar estudios'
+                      : 'Agregar otros estudios'}
+                  </button>
+                </div>
               </div>
             </div>
+            <div className="flex justify-center text-xl text-slate-700 my-4">
+              <a href="#menu">
+                <button
+                  className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
+                  onClick={() =>
+                    this.setState({ active: this.changePanel('left') })
+                  }
+                >
+                  {'<'}
+                </button>
+              </a>
+              <a href="#menu">
+                <button
+                  className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
+                  onClick={() =>
+                    this.setState({ active: this.changePanel('right') })
+                  }
+                >
+                  {'>'}
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="flex justify-center text-xl text-slate-700 my-4">
-            <button
-              className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
-              onClick={() =>
-                this.setState({ active: this.changePanel('left') })
-              }
-            >
-              {'<'}
-            </button>
-            <button
-              className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
-              onClick={() =>
-                this.setState({ active: this.changePanel('right') })
-              }
-            >
-              {'>'}
-            </button>
+          <div className="lg:w-1/2 lg:px-4 max-h-screen">
+            <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
+              <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
+              <ReactToPrint
+                trigger={() => {
+                  return (
+                    <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900 duration-200">
+                      Descargar CV
+                    </button>
+                  );
+                }}
+                content={() => this.componentRef}
+              />
+            </div>
           </div>
         </div>
-        <div className="lg:w-1/2 lg:px-4 max-h-screen">
-          <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
-            <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
-            <ReactToPrint
-              trigger={() => {
-                return (
-                  <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900 duration-200">
-                    Descargar CV
-                  </button>
-                );
-              }}
-              content={() => this.componentRef}
-            />
-          </div>
-        </div>
-      </div>
+      </>
     );
   }
 }

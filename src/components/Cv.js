@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CvEd from './CvEd';
 import CvJob from './CvJob';
+import CvCourse from './CvCourse';
 
 export class Cv extends Component {
   render() {
@@ -99,13 +100,14 @@ export class Cv extends Component {
                 formación adicional
               </h2>
               {courses.map((course) => (
-                <CvJob
-                  place={course.institute}
+                <CvCourse
+                  key={course.id}
+                  institute={course.institute}
                   datestart={course.datestart}
                   dateend={course.dateend}
                   city={course.city}
                   country={course.country}
-                  rol={course.title}
+                  title={course.title}
                   description={course.description}
                 />
               ))}
