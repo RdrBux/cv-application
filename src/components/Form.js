@@ -159,7 +159,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'personal'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4'
+                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
               }
               onClick={() => this.setState({ active: 'personal' })}
             >
@@ -169,7 +169,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'laboral'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4'
+                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
               }
               onClick={() => this.setState({ active: 'laboral' })}
             >
@@ -179,7 +179,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'extra'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2 hover:border-b-4'
+                  : 'p-2 border-b-2 hover:border-b-4 duration-200'
               }
               onClick={() => this.setState({ active: 'extra' })}
             >
@@ -247,7 +247,7 @@ export class Form extends Component {
               <div>
                 {this.renderJobs()}
                 <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
                   onClick={() => this.job()}
                 >
                   {this.state.jobs.length === 0
@@ -276,7 +276,7 @@ export class Form extends Component {
                 />
                 {this.renderEducation()}
                 <button
-                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                  className="p-4 rounded-lg mt-4 text-sm font-semibold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 duration-200"
                   onClick={() => this.education()}
                 >
                   {this.state.education.length === 0
@@ -288,7 +288,7 @@ export class Form extends Component {
           </div>
           <div className="flex justify-center text-xl text-slate-700 my-4">
             <button
-              className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100"
+              className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
               onClick={() =>
                 this.setState({ active: this.changePanel('left') })
               }
@@ -296,7 +296,7 @@ export class Form extends Component {
               {'<'}
             </button>
             <button
-              className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100"
+              className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
               onClick={() =>
                 this.setState({ active: this.changePanel('right') })
               }
@@ -311,7 +311,7 @@ export class Form extends Component {
             <ReactToPrint
               trigger={() => {
                 return (
-                  <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900">
+                  <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900 duration-200">
                     Descargar CV
                   </button>
                 );
