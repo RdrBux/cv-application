@@ -53,22 +53,28 @@ export class Cv extends Component {
                 <p className="">{personal.profession || 'Web Designer'}</p>
               </div>
               <div className="border-b-4 pb-3 h-20 flex flex-col gap-2 justify-end text-xs leading-[0.88em] tracking-tight pl-3">
-                <div className="flex items-center gap-1">
-                  <img src="./img/web.svg" alt="" width={'10px'} />
-                  {personal.webpage || 'www.gonzalez.com'}
-                </div>
+                {personal.webpage && (
+                  <div className="flex items-center gap-1">
+                    <img src="./img/web.svg" alt="" width={'10px'} />
+                    {personal.webpage}
+                  </div>
+                )}
                 <div className="flex items-center gap-1">
                   <img src="./img/mail.svg" alt="" width={'10px'} />
                   {personal.mail || 'gonzalez@gmail.com'}
                 </div>
-                <div className="flex items-center gap-1">
-                  <img src="./img/phone.svg" alt="" width={'10px'} />
-                  {personal.phone || '+12 345 6789'}
-                </div>
-                <div className="flex items-center gap-1">
-                  <img src="./img/linkedin.svg" alt="" width={'10px'} />
-                  {personal.linkedin || 'Gonzalo González'}
-                </div>
+                {personal.phone && (
+                  <div className="flex items-center gap-1">
+                    <img src="./img/phone.svg" alt="" width={'10px'} />
+                    {personal.phone}
+                  </div>
+                )}
+                {personal.linkedin && (
+                  <div className="flex items-center gap-1">
+                    <img src="./img/linkedin.svg" alt="" width={'10px'} />
+                    {personal.linkedin}
+                  </div>
+                )}
               </div>
             </div>
             <div className="pl-3 mt-4">
