@@ -6,7 +6,7 @@ export class CvJob extends Component {
       this.props;
     return (
       <div className="flex mt-3 text-sm text-gray-600 tracking-tight border-b-2 pb-2">
-        <div className="w-1/2">
+        <div className="w-1/2 pr-4">
           <p className="text-base font-bold text-black">{place}</p>
           <p>
             {datestart} - {dateend}

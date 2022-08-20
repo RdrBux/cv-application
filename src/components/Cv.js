@@ -10,10 +10,10 @@ export class Cv extends Component {
       <div className="font-inter text-black p-10 border grid grid-cols-3 w-[792px] h-[1120px]">
         <div className="flex flex-col justify-between">
           <div>
-            <div className="font-bold text-4xl leading-9 border-b-4 pb-3 h-20 flex flex-col justify-end tracking-tighter pr-3">
+            <div className="font-bold text-4xl leading-9 border-b-4 pb-3 h-20 flex flex-col justify-end tracking-tighter pr-4">
               <h1 className="">{personal.name || 'Gonzalo González'}</h1>
             </div>
-            <div className="pr-3">
+            <div className="pr-4">
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
                 sobre mí
               </h2>
@@ -22,7 +22,7 @@ export class Cv extends Component {
                   'Descripción de intereses personales, capacidades, motivaciones y sobre qué le puedes aportar a la empresa.'}
               </p>
             </div>
-            <div className="pr-3">
+            <div className="pr-4">
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
                 educación
               </h2>
@@ -35,15 +35,15 @@ export class Cv extends Component {
                 />
               ))}
             </div>
-            <div className="pr-3">
+            <div className="pr-4">
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
                 habilidades
               </h2>
-              <p className="text-base mt-3 pr-2">{extra.skills}</p>
+              <p className="text-base mt-3 pr-4">{extra.skills}</p>
             </div>
           </div>
           <div className="border-t-4 text-xs pt-2">
-            <p>{personal.webpage || personal.name}</p>
+            <p>{personal.webpage || personal.name || 'Gonzalo González'}</p>
           </div>
         </div>
         <div className="col-span-2 flex flex-col justify-between">
@@ -83,6 +83,23 @@ export class Cv extends Component {
               </h2>
               {jobs.map((job) => (
                 <CvJob
+                  key={job.id}
+                  place={job.place}
+                  datestart={job.datestart}
+                  dateend={job.dateend}
+                  city={job.city}
+                  country={job.country}
+                  rol={job.rol}
+                  description={job.description}
+                />
+              ))}
+            </div>
+            <div className="pl-3 mt-4">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
+                formación adicional
+              </h2>
+              {jobs.map((job) => (
+                <CvJob
                   place={job.place}
                   datestart={job.datestart}
                   dateend={job.dateend}
@@ -105,26 +122,3 @@ export class Cv extends Component {
 }
 
 export default Cv;
-/* 
-        <div>
-          <p className="font-bold">Personal</p>
-          <div>{personal.name || 'name'}</div>
-          <div>{personal.profession || 'profession'}</div>
-          <div>{personal.webpage || 'webpage'}</div>
-          <div>{personal.mail || 'mail'}</div>
-          <div>{personal.phone || 'phone'}</div>
-          <div>{personal.linkedin || 'linkedin'}</div>
-        </div>
-        <div>
-          <p className="font-bold">Extra</p>
-          <div>{extra.personal || 'about me'}</div>
-          <div>{extra.skills || 'skills'}</div>
-        </div>
-        <div>
-          <p className="font-bold">Jobs</p>
-          {jobsList}
-        </div>
-        <div>
-          <p className="font-bold">Education</p>
-          {edList}
-        </div> */
