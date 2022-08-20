@@ -5,43 +5,22 @@ import CvJob from './CvJob';
 export class Cv extends Component {
   render() {
     const { personal, extra, jobs, education } = this.props.state;
-    const jobsList = jobs.map((job) => {
-      return (
-        <div>
-          <p>{job.place}</p>
-          <p>{job.rol}</p>
-          <p>{job.description}</p>
-          <p>{job.datestart}</p>
-          <p>{job.dateend}</p>
-          <p>{job.city}</p>
-          <p>{job.country}</p>
-        </div>
-      );
-    });
-
-    const edList = education.map((ed) => {
-      return (
-        <div>
-          <p>{ed.college}</p>
-          <p>{ed.career}</p>
-          <p>{ed.yearstart}</p>
-          <p>{ed.yearend}</p>
-        </div>
-      );
-    });
 
     return (
       <div className="font-inter text-black p-10 border grid grid-cols-3 w-[792px] h-[1120px]">
         <div className="flex flex-col justify-between">
           <div>
-            <div className="font-bold text-4xl leading-8 border-b-4 pb-3 h-20 flex flex-col justify-end tracking-tighter pr-3">
-              <h1 className="">{personal.name || 'John Doe'}</h1>
+            <div className="font-bold text-4xl leading-9 border-b-4 pb-3 h-20 flex flex-col justify-end tracking-tighter pr-3">
+              <h1 className="">{personal.name || 'Gonzalo González'}</h1>
             </div>
             <div className="pr-3">
-              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
                 sobre mí
               </h2>
-              <p className="text-sm mt-3 text-gray-600">{extra.personal}</p>
+              <p className="text-sm mt-3 text-gray-600">
+                {extra.personal ||
+                  'Descripción de intereses personales, capacidades, motivaciones y sobre qué le puedes aportar a la empresa.'}
+              </p>
             </div>
             <div className="pr-3">
               <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
@@ -73,14 +52,27 @@ export class Cv extends Component {
               <div className="font-bold text-base leading-3 border-b-4 pb-3 h-20 w-full flex flex-col justify-end px-3">
                 <p className="">{personal.profession || 'Web Designer'}</p>
               </div>
-              <div className="border-b-4 pb-3 h-20 flex flex-col gap-1 justify-end text-xs leading-[0.88em] tracking-tight pl-3">
-                <div>{personal.webpage || 'www.johndoe.com'}</div>
-                <div>{personal.mail || 'john.doe@gmail.com'}</div>
-                <div>{personal.linkedin || 'John Doe'}</div>
+              <div className="border-b-4 pb-3 h-20 flex flex-col gap-2 justify-end text-xs leading-[0.88em] tracking-tight pl-3">
+                <div className="flex items-center gap-1">
+                  <img src="./img/web.svg" alt="" width={'10px'} />
+                  {personal.webpage || 'www.gonzalez.com'}
+                </div>
+                <div className="flex items-center gap-1">
+                  <img src="./img/mail.svg" alt="" width={'10px'} />
+                  {personal.mail || 'gonzalez@gmail.com'}
+                </div>
+                <div className="flex items-center gap-1">
+                  <img src="./img/phone.svg" alt="" width={'10px'} />
+                  {personal.phone || '+12 345 6789'}
+                </div>
+                <div className="flex items-center gap-1">
+                  <img src="./img/linkedin.svg" alt="" width={'10px'} />
+                  {personal.linkedin || 'Gonzalo González'}
+                </div>
               </div>
             </div>
             <div className="pl-3 mt-4">
-              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-10">
+              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
                 experiencia laboral
               </h2>
               {jobs.map((job) => (

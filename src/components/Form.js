@@ -209,7 +209,7 @@ export class Form extends Component {
                   onChange={(e) => this.handleChangePersonal(e)}
                 />
                 <Input
-                  title="Página web"
+                  title="Página web (opcional)"
                   id="webpage"
                   type="text"
                   value={this.state.personal.webpage}
@@ -223,14 +223,14 @@ export class Form extends Component {
                   onChange={(e) => this.handleChangePersonal(e)}
                 />
                 <Input
-                  title="Teléfono"
+                  title="Teléfono (opcional)"
                   id="phone"
                   type="text"
                   value={this.state.personal.phone}
                   onChange={(e) => this.handleChangePersonal(e)}
                 />
                 <Input
-                  title="Linkedin"
+                  title="Linkedin (opcional)"
                   id="linkedin"
                   type="text"
                   value={this.state.personal.linkedin}
@@ -242,7 +242,7 @@ export class Form extends Component {
               className={this.state.active === 'laboral' ? 'block' : 'hidden'}
             >
               <h2 className="font-bold text-2xl text-slate-900">
-                Experiencia Laboral
+                Experiencia laboral
               </h2>
               <div>
                 {this.renderJobs()}
@@ -258,7 +258,7 @@ export class Form extends Component {
             </div>
             <div className={this.state.active === 'extra' ? 'block' : 'hidden'}>
               <h2 className="font-bold text-2xl text-slate-900">
-                Información Adicional
+                Información adicional
               </h2>
               <div>
                 <Textarea

@@ -9,7 +9,7 @@ export class Textarea extends Component {
           {title}:{' '}
         </label>
         <textarea
-          className="border p-2 rounded "
+          className="border p-2 rounded"
           id={id}
           value={value}
           onChange={onChange}

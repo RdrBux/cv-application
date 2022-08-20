@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Textarea from './Textarea';
 
 export class Job extends Component {
   render() {
@@ -39,10 +40,9 @@ export class Job extends Component {
           value={rol}
           onChange={handleChange}
         />
-        <Input
+        <Textarea
           title="Descripción de tareas"
           id="description"
-          type="text"
           value={description}
           onChange={handleChange}
         />
