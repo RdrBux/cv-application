@@ -5,6 +5,7 @@ import Job from './Job';
 import { nanoid } from 'nanoid';
 import ReactToPrint from 'react-to-print';
 import Cv from './Cv';
+import Textarea from './Textarea';
 
 export class Form extends Component {
   constructor() {
@@ -158,7 +159,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'personal'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2'
+                  : 'p-2 border-b-2 hover:border-b-4'
               }
               onClick={() => this.setState({ active: 'personal' })}
             >
@@ -168,7 +169,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'laboral'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2'
+                  : 'p-2 border-b-2 hover:border-b-4'
               }
               onClick={() => this.setState({ active: 'laboral' })}
             >
@@ -178,7 +179,7 @@ export class Form extends Component {
               className={
                 this.state.active === 'extra'
                   ? 'p-2 border-b-4 border-indigo-700 text-indigo-700'
-                  : 'p-2 border-b-2'
+                  : 'p-2 border-b-2 hover:border-b-4'
               }
               onClick={() => this.setState({ active: 'extra' })}
             >
@@ -260,10 +261,9 @@ export class Form extends Component {
                 Información Adicional
               </h2>
               <div>
-                <Input
+                <Textarea
                   title="Descripción personal"
                   id="personal"
-                  type="text"
                   value={this.state.extra.personal}
                   onChange={(e) => this.handleChangeExtra(e)}
                 />
@@ -306,7 +306,7 @@ export class Form extends Component {
           </div>
         </div>
         <div className="lg:w-1/2 lg:px-4 max-h-screen">
-          <div className="scale-[40%] -translate-x-1/4 -translate-y-1/4">
+          <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
             <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
             <ReactToPrint
               trigger={() => {
