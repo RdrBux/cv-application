@@ -32,10 +32,9 @@ export class App extends Component {
         <Hero onClick={this.goToCreator} />
         <About />
         <Testimonial />
-        <Blog />
-        <Newsletter />
+        {/* <Blog />
+        <Newsletter /> */}
         <Footer />
-        {/* <Form /> */}
       </div>
     );
   }

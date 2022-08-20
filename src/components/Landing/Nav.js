@@ -4,7 +4,7 @@ export class Nav extends Component {
   render() {
     const { onClick } = this.props;
     return (
-      <nav className="sticky top-0 z-50 bg-slate-100 h-16 px-4 backdrop-filter backdrop-blur-lg bg-opacity-40 border-b border-slate-200">
+      <nav className="sticky top-0 z-50 bg-slate-100 h-16 px-4 backdrop-filter backdrop-blur-lg bg-opacity-40 border-b border-slate-300">
         <React.Fragment>
           <div className="flex justify-between items-center h-full container lg:max-w-6xl">
             <div className="font-semibold text-lg text-slate-900">
