@@ -48,8 +48,8 @@ export class Testimonial extends Component {
               <img className="w-5" src="./img/star-gold.svg" alt="star" />
             </div>
             <p className="text-center lg:text-left font-medium lg:text-lg">
-              Ya he entregado más de cinco veces mis cvs de $$NOMBRE$$ en
-              persona y siempre recibí algún comentario positivo por el diseño.
+              Ya he entregado más de cinco veces mis cvs de CV Design en persona
+              y siempre recibí algún comentario positivo por el diseño.
             </p>
             <div className="flex gap-2 items-center">
               <img className="w-12" src="./img/avatar2.png" alt="" />

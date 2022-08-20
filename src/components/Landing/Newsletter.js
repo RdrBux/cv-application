@@ -33,7 +33,7 @@ export class Newsletter extends Component {
                 </button>
               </div>
               <p className="text-xs mt-4 text-indigo-200">
-                * $$NAME$$ se compromete a no enviar ningún correo adicional o
+                * CV Design se compromete a no enviar ningún correo adicional o
                 no deseado.
               </p>
             </form>

@@ -47,7 +47,7 @@ export class Blog extends Component {
             ortográficos.
           </p>
           <p>
-            <strong>Utiliza una buena plantilla,</strong> en $$NOMBRE$$ dispones
+            <strong>Utiliza una buena plantilla,</strong> en CV Design dispones
             de plantillas profesionales de diversos tipos, todas diseñadas
             detalladamente para garantizar los mejores resultados.
           </p>

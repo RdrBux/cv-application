@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 export class Hero extends Component {
   render() {
+    const { onClick } = this.props;
     return (
       <div className="relative bg-slate-100 w-full">
         <div className="absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
-        <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12">
+        <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12 lg:pt-2">
           <img
             className=" z-20 lg:absolute lg:right-0 shadow-2xl w-72 lg:w-1/3"
             src="./img/hero-cv.png"
@@ -23,7 +24,7 @@ export class Hero extends Component {
                 <img className="w-5" src="./img/star.svg" alt="star" />
               </div>
               <p className="text-center lg:text-left text-slate-700 max-w-md font-medium">
-                “Con $$NAME$$ logré hacer mi CV en minutos desde el celular y
+                “Con CV Design logré hacer mi CV en minutos desde el celular y
                 conseguí mi primera entrevista en un día.”
               </p>
               <p className="text-center text-xs lg:text-sm text-slate-500">
@@ -38,15 +39,18 @@ export class Hero extends Component {
                 Construye tu próximo CV profesional en cinco minutos
               </h1>
               <p className="font-light text-slate-700 lg:text-xl lg:max-w-xl">
-                En $$NAME$$ nos aseguramos de crear plantillas profesionales
+                En CV Design nos aseguramos de crear plantillas profesionales
                 para que tu Curriculum Vitae destaque sobre toda la competencia.
               </p>
               <div className="flex gap-3">
-                <button className="px-5 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900">
+                <button
+                  className="px-5 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900 duration-200"
+                  onClick={onClick}
+                >
                   Crea tu CV
                 </button>
                 <a href="#newsletter">
-                  <button className="px-5 py-3 text-indigo-700 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-700 shadow hover:bg-slate-200">
+                  <button className="px-5 py-3 text-indigo-700 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-700 shadow hover:bg-slate-100 duration-200">
                     Plantillas Premium
                   </button>
                 </a>

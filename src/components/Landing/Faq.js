@@ -65,7 +65,7 @@ export class Faq extends Component {
               ¿Almacenan la información de las personas que emplean el servicio?
             </p>
             <p className="text-slate-700">
-              $$NOMBRE$$ no almacena ninguna información de los usuarios en el
+              CV Design no almacena ninguna información de los usuarios en el
               proceso de creación de CVs, lo cual hace que cualquier dato que
               coloques en tu CV sea inaccesible tanto para la empresa como para
               otros usuarios.

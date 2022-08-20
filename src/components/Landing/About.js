@@ -17,7 +17,7 @@ export class About extends Component {
             ¿Por qué elegirnos?
           </h2>
           <p className="text-slate-700 leading-6 font-light lg:text-xl">
-            En $$NAME$$ contamos con un equipo de diseñadores expertos y nos
+            En CV Design contamos con un equipo de diseñadores expertos y nos
             aseguramos de estar siempre en contacto con reclutadores para saber
             qué se busca en cada momento. Nuestras plantillas son examinadas y
             corregidas hasta garantizar la perfección.
