@@ -393,12 +393,16 @@ export class Form extends Component {
                 trigger={() => {
                   return (
                     <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900 duration-200">
-                      Descargar CV
+                      Descargar
                     </button>
                   );
                 }}
                 content={() => this.componentRef}
               />
+              <p className="pl-10 pt-3 text-slate-800 text-xl">
+                <span className="font-semibold">ACLARACIÓN:</span> Selecciona el
+                tamaño de hoja A4 luego de presionar el botón de descarga.
+              </p>
             </div>
           </div>
         </div>

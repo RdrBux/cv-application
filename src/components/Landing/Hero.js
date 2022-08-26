@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Hero extends Component {
   render() {
@@ -43,14 +44,14 @@ export class Hero extends Component {
                 para que tu Curriculum Vitae destaque sobre toda la competencia.
               </p>
               <div className="flex gap-3">
-                <a href="#">
+                <Link to="/form">
                   <button
                     className="px-10 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900 duration-200"
                     onClick={onClick}
                   >
                     Crea tu CV
                   </button>
-                </a>
+                </Link>
                 {/* <a href="#newsletter">
                   <button className="px-5 py-3 text-indigo-700 font-bold text-sm lg:text-base bg-white rounded-lg border border-indigo-700 shadow hover:bg-slate-100 duration-200">
                     Plantillas Premium

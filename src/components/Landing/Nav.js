@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Nav extends Component {
   render() {
@@ -10,14 +11,14 @@ export class Nav extends Component {
             <div className="font-semibold text-xl text-slate-900">
               CV Design
             </div>
-            <a href="#">
+            <Link to="/form">
               <button
                 className="bg-slate-900 hover:bg-slate-700 duration-200 text-slate-100 px-4 py-2 font-bold rounded-lg text-sm"
                 onClick={onClick}
               >
                 Creador de CV
               </button>
-            </a>
+            </Link>
           </div>
         </React.Fragment>
       </nav>
