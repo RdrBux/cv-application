@@ -18,7 +18,7 @@ export class Hero extends Component {
         </div>
         <div className="w-full">
           <div className="pb-7 flex flex-col items-center">
-            <div className="px-4 flex flex-col items-center container lg:items-start gap-3 lg:max-w-6xl lg:pt-16 lg:pb-4">
+            <div className="px-4 flex flex-col items-center container lg:items-start gap-3 lg:max-w-6xl lg:pt-2 lg:pb-4">
               <div className="flex gap-1">
                 <img className="w-5" src={star} alt="star" />
                 <img className="w-5" src={star} alt="star" />
@@ -48,7 +48,7 @@ export class Hero extends Component {
               <div className="flex gap-3">
                 <Link to="/form">
                   <button
-                    className="flex items-center gap-1 px-10 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow hover:bg-indigo-900 duration-200"
+                    className="flex items-center gap-1 px-10 py-3 bg-indigo-700 font-bold text-sm lg:text-base text-white rounded-lg shadow-2xl hover:bg-indigo-900 duration-200"
                     onClick={onClick}
                   >
                     Crea tu CV{' '}
