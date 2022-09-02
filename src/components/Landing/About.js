@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import aboutPhoto from '../../img/about-photo.jpg';
+import social from '../../img/social.svg';
 
 export class About extends Component {
   render() {
@@ -6,12 +8,12 @@ export class About extends Component {
       <section className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-4 py-16 lg:py-24 gap-5 container lg:max-w-6xl">
         <img
           className="max-w-lg aspect-square object-cover shadow-2xl rounded-lg"
-          src="./img/about-photo.jpg"
+          src={aboutPhoto}
           alt=""
         />
         <div className="flex flex-col gap-5">
           <div className="flex justify-start p-3 bg-indigo-900 rounded-lg w-fit">
-            <img className="w-5 shadow" src="./img/social.svg" alt="" />
+            <img className="w-5 shadow" src={social} alt="" />
           </div>
           <h2 className="text-slate-900 font-bold text-3xl lg:text-4xl">
             ¿Por qué elegirnos?

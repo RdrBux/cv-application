@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import star from '../../img/star.svg';
+import heroCv from '../../img/hero-cv.png';
 
 export class Hero extends Component {
   render() {
@@ -10,7 +12,7 @@ export class Hero extends Component {
         <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12 lg:pt-2">
           <img
             className=" z-20 lg:absolute lg:right-0 shadow-2xl w-72 lg:w-1/3"
-            src="./img/hero-cv.png"
+            src={heroCv}
             alt="CV Example."
           />
         </div>
@@ -18,11 +20,11 @@ export class Hero extends Component {
           <div className="pb-7 flex flex-col items-center">
             <div className="px-4 flex flex-col items-center container lg:items-start gap-3 lg:max-w-6xl lg:pt-16 lg:pb-4">
               <div className="flex gap-1">
-                <img className="w-5" src="./img/star.svg" alt="star" />
-                <img className="w-5" src="./img/star.svg" alt="star" />
-                <img className="w-5" src="./img/star.svg" alt="star" />
-                <img className="w-5" src="./img/star.svg" alt="star" />
-                <img className="w-5" src="./img/star.svg" alt="star" />
+                <img className="w-5" src={star} alt="star" />
+                <img className="w-5" src={star} alt="star" />
+                <img className="w-5" src={star} alt="star" />
+                <img className="w-5" src={star} alt="star" />
+                <img className="w-5" src={star} alt="star" />
               </div>
               <p className="text-center lg:text-left text-slate-700 max-w-md font-medium">
                 “Con CV Design logré hacer mi Curriculum Vitae en minutos desde
