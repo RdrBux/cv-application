@@ -364,7 +364,7 @@ export class Form extends Component {
               </div>
             </div>
             <div className="flex justify-center text-xl text-slate-700 my-4">
-              <a href="#menu">
+              <a href="#/form">
                 <button
                   className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
                   onClick={() =>
@@ -374,7 +374,7 @@ export class Form extends Component {
                   {'<'}
                 </button>
               </a>
-              <a href="#menu">
+              <a href="#/form">
                 <button
                   className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
                   onClick={() =>
