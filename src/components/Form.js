@@ -390,14 +390,14 @@ export class Form extends Component {
               <ReactToPrint
                 trigger={() => {
                   return (
-                    <button className="ml-10 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow hover:bg-indigo-900 duration-200">
+                    <button className="ml-10 mb-6 p-10 rounded-lg mt-10 text-4xl font-semibold text-white bg-indigo-700 shadow-2xl hover:bg-indigo-900 duration-200">
                       Descargar
                     </button>
                   );
                 }}
                 content={() => this.componentRef}
               />
-              <p className="pl-10 pt-3 text-slate-800 text-3xl pb-10">
+              <p className="pl-10 pt-3 text-slate-800 text-3xl pb-10 w-[800px]">
                 <span className="font-semibold">ACLARACIÓN:</span> Selecciona el
                 tamaño de hoja A4 luego de presionar el botón de descarga.
               </p>
