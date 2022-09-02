@@ -194,12 +194,14 @@ export class Form extends Component {
       if (index === 0) {
         return sections[0];
       }
+      window.scrollTo(0, 0);
       return sections[index - 1];
     }
     if (side === 'right') {
       if (index === 2) {
         return sections[2];
       }
+      window.scrollTo(0, 0);
       return sections[index + 1];
     }
   }
@@ -210,10 +212,7 @@ export class Form extends Component {
         <NavForm />
         <div className="p-4 container lg:max-w-6xl lg:flex">
           <div className="lg:w-1/2">
-            <div
-              className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8"
-              id="menu"
-            >
+            <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
               <button
                 className={
                   this.state.active === 'personal'
@@ -364,29 +363,28 @@ export class Form extends Component {
               </div>
             </div>
             <div className="flex justify-center text-xl text-slate-700 my-4">
-              <a href="#/form">
-                <button
-                  className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
-                  onClick={() =>
-                    this.setState({ active: this.changePanel('left') })
-                  }
-                >
-                  {'<'}
-                </button>
-              </a>
-              <a href="#/form">
-                <button
-                  className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
-                  onClick={() =>
-                    this.setState({ active: this.changePanel('right') })
-                  }
-                >
-                  {'>'}
-                </button>
-              </a>
+              <button
+                className="px-4 py-2 border-2 rounded-l-lg hover:bg-slate-100 duration-100"
+                onClick={() =>
+                  this.setState({ active: this.changePanel('left') })
+                }
+              >
+                {'<'}
+              </button>
+              <button
+                className="px-4 py-2 border-2 rounded-r-lg hover:bg-slate-100 duration-100"
+                onClick={() =>
+                  this.setState({ active: this.changePanel('right') })
+                }
+              >
+                {'>'}
+              </button>
             </div>
           </div>
-          <div className="lg:w-1/2 lg:px-4 max-h-screen">
+          <div className="lg:pl-16 lg:w-1/2 lg:px-4 max-h-screen">
+            <h2 className="mt-16 -mb-8 lg:my-10 font-bold text-2xl text-slate-900">
+              Vista previa
+            </h2>
             <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
               <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
               <ReactToPrint
@@ -399,7 +397,7 @@ export class Form extends Component {
                 }}
                 content={() => this.componentRef}
               />
-              <p className="pl-10 pt-3 text-slate-800 text-xl">
+              <p className="pl-10 pt-3 text-slate-800 text-3xl pb-10">
                 <span className="font-semibold">ACLARACIÓN:</span> Selecciona el
                 tamaño de hoja A4 luego de presionar el botón de descarga.
               </p>

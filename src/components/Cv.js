@@ -29,6 +29,7 @@ export class Cv extends Component {
               </h2>
               {education.map((ed) => (
                 <CvEd
+                  key={ed.id}
                   yearstart={ed.yearstart}
                   yearend={ed.yearend}
                   career={ed.career}
