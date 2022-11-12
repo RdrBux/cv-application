@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        inter: ['Inter', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter Tight', ...defaultTheme.fontFamily.sans],
       },
     },
     container: {

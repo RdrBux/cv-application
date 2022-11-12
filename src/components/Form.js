@@ -13,6 +13,7 @@ export class Form extends Component {
   constructor() {
     super();
     this.state = {
+      color: '#F3F4F6',
       active: 'personal',
       jobs: [],
       education: [],
@@ -24,6 +25,7 @@ export class Form extends Component {
         mail: '',
         phone: '',
         linkedin: '',
+        picture: '',
       },
       extra: {
         personal: '',
@@ -187,6 +189,10 @@ export class Form extends Component {
     });
   }
 
+  handleColorChange(e) {
+    this.setState({ color: e.target.value });
+  }
+
   changePanel(side) {
     const sections = ['personal', 'laboral', 'extra'];
     const index = sections.indexOf(this.state.active);
@@ -210,7 +216,7 @@ export class Form extends Component {
     return (
       <>
         <NavForm />
-        <div className="p-4 container lg:max-w-6xl lg:flex pt-20">
+        <div className="container p-4 lg:max-w-6xl lg:flex pt-20">
           <div className="lg:w-1/2">
             <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
               <button
@@ -295,6 +301,20 @@ export class Form extends Component {
                     type="text"
                     value={this.state.personal.linkedin}
                     onChange={(e) => this.handleChangePersonal(e)}
+                  />
+                  <Input
+                    title="Foto (opcional)"
+                    id="picture"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) =>
+                      this.setState({
+                        personal: {
+                          ...this.state.personal,
+                          [e.target.id]: e.target.files,
+                        },
+                      })
+                    }
                   />
                 </div>
               </div>
@@ -382,9 +402,30 @@ export class Form extends Component {
             </div>
           </div>
           <div className="lg:pl-16 lg:w-1/2 lg:px-4 max-h-screen">
-            <h2 className="mt-16 -mb-8 lg:my-10 font-bold text-2xl text-slate-900">
+            <div className="mt-16 -mb-8 lg:my-10 font-bold text-2xl text-slate-900">
               Vista previa
-            </h2>
+              <div>
+                <label className="text-base font-medium">
+                  COLOR:{' '}
+                  <select
+                    className="px-3 py-1 rounded mt-4 ml-2 bg-gray-200"
+                    value={this.state.color}
+                    onChange={(e) => this.handleColorChange(e)}
+                  >
+                    <option value="#FFFFFF">Ninguno</option>
+                    <option value="#F3F4F6">Gris</option>
+                    <option value="#FEE2E2">Rojo</option>
+                    <option value="#FED7AA">Naranja</option>
+                    <option value="#FEF08A">Amarillo</option>
+                    <option value="#BBF7D0">Verde</option>
+                    <option value="#BAE6FD">Celeste</option>
+                    <option value="#BFDBFE">Azul</option>
+                    <option value="#DDD6FE">Violeta</option>
+                    <option value="#FBCFE8">Rosa</option>
+                  </select>
+                </label>
+              </div>
+            </div>
             <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
               <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
               <ReactToPrint

@@ -5,7 +5,7 @@ export class CvCourse extends Component {
     const { institute, datestart, dateend, city, country, title, description } =
       this.props;
     return (
-      <div className="flex mt-3 text-sm text-gray-600 tracking-tight border-b-2 pb-2">
+      <div className="flex mt-3 text-sm text-gray-600 border-b-2 pb-2">
         <div className="w-1/2 pr-4">
           <p className="text-base font-bold text-black">{institute}</p>
           <p>
