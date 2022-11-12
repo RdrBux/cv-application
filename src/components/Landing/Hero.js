@@ -7,8 +7,8 @@ export class Hero extends Component {
   render() {
     const { onClick } = this.props;
     return (
-      <div className="relative bg-slate-100 w-full">
-        <div className="absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
+      <div className="relative bg-slate-100 w-full pt-20">
+        <div className="top-0 absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
         <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12 lg:pt-2">
           <img
             className=" z-20 lg:absolute lg:right-0 shadow-2xl w-72 lg:w-1/3"

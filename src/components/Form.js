@@ -210,7 +210,7 @@ export class Form extends Component {
     return (
       <>
         <NavForm />
-        <div className="p-4 container lg:max-w-6xl lg:flex">
+        <div className="p-4 container lg:max-w-6xl lg:flex pt-20">
           <div className="lg:w-1/2">
             <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
               <button
