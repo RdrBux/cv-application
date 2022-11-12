@@ -21,7 +21,7 @@ export class Cv extends Component {
       <div className="relative font-inter text-black p-10 border grid grid-cols-3 w-[792px] h-[1120px]">
         <div
           className="absolute top-0 left-0 w-[275px] h-full"
-          style={{ 'background-color': `${color}` }}
+          style={{ backgroundColor: `${color}` }}
         ></div>
         <div className="z-10 flex flex-col justify-between">
           <div>

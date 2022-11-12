@@ -8,11 +8,13 @@ import ReactToPrint from 'react-to-print';
 import Cv from './Cv';
 import Textarea from './Textarea';
 import NavForm from './NavForm';
+import AmericanCv from './AmericanCv';
 
 export class Form extends Component {
   constructor() {
     super();
     this.state = {
+      template: 'american',
       color: '#F3F4F6',
       active: 'personal',
       jobs: [],
@@ -32,6 +34,8 @@ export class Form extends Component {
         skills: '',
       },
     };
+
+    this.changeTemplate = this.changeTemplate.bind(this);
   }
 
   job() {
@@ -193,6 +197,10 @@ export class Form extends Component {
     this.setState({ color: e.target.value });
   }
 
+  changeTemplate(e) {
+    this.setState({ template: e.target.value });
+  }
+
   changePanel(side) {
     const sections = ['personal', 'laboral', 'extra'];
     const index = sections.indexOf(this.state.active);
@@ -215,7 +223,10 @@ export class Form extends Component {
   render() {
     return (
       <>
-        <NavForm />
+        <NavForm
+          template={this.state.template}
+          changeTemplate={this.changeTemplate}
+        />
         <div className="container p-4 lg:max-w-6xl lg:flex pt-20">
           <div className="lg:w-1/2">
             <div className="border p-4 flex justify-center rounded-lg text-slate-700 mb-8">
@@ -404,30 +415,39 @@ export class Form extends Component {
           <div className="lg:pl-16 lg:w-1/2 lg:px-4 max-h-screen">
             <div className="mt-16 -mb-8 lg:my-10 font-bold text-2xl text-slate-900">
               Vista previa
-              <div>
-                <label className="text-base font-medium">
-                  COLOR:{' '}
-                  <select
-                    className="px-3 py-1 rounded mt-4 ml-2 bg-gray-200"
-                    value={this.state.color}
-                    onChange={(e) => this.handleColorChange(e)}
-                  >
-                    <option value="#FFFFFF">Ninguno</option>
-                    <option value="#F3F4F6">Gris</option>
-                    <option value="#FEE2E2">Rojo</option>
-                    <option value="#FED7AA">Naranja</option>
-                    <option value="#FEF08A">Amarillo</option>
-                    <option value="#BBF7D0">Verde</option>
-                    <option value="#BAE6FD">Celeste</option>
-                    <option value="#BFDBFE">Azul</option>
-                    <option value="#DDD6FE">Violeta</option>
-                    <option value="#FBCFE8">Rosa</option>
-                  </select>
-                </label>
-              </div>
+              {this.state.template === 'swiss' && (
+                <div>
+                  <label className="text-base font-medium">
+                    COLOR:{' '}
+                    <select
+                      className="px-3 py-1 rounded mt-4 ml-2 bg-gray-200"
+                      value={this.state.color}
+                      onChange={(e) => this.handleColorChange(e)}
+                    >
+                      <option value="#FFFFFF">Ninguno</option>
+                      <option value="#F3F4F6">Gris</option>
+                      <option value="#FEE2E2">Rojo</option>
+                      <option value="#FED7AA">Naranja</option>
+                      <option value="#FEF08A">Amarillo</option>
+                      <option value="#BBF7D0">Verde</option>
+                      <option value="#BAE6FD">Celeste</option>
+                      <option value="#BFDBFE">Azul</option>
+                      <option value="#DDD6FE">Violeta</option>
+                      <option value="#FBCFE8">Rosa</option>
+                    </select>
+                  </label>
+                </div>
+              )}
             </div>
             <div className="scale-[40%] lg:scale-50 -translate-x-1/4 -translate-y-1/4">
-              <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
+              {this.state.template === 'swiss' ? (
+                <Cv state={this.state} ref={(el) => (this.componentRef = el)} />
+              ) : (
+                <AmericanCv
+                  state={this.state}
+                  ref={(el) => (this.componentRef = el)}
+                />
+              )}
               <ReactToPrint
                 trigger={() => {
                   return (
