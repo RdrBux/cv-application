@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export class Nav extends Component {
   render() {
     return (
-      <nav className="fixed top-0 w-full z-50 bg-indigo-900/90 h-16 px-4 shadow-lg mb-4">
+      <nav className="fixed top-0 w-full z-50 filter backdrop-blur-sm bg-indigo-900/90 h-16 px-4 shadow-lg mb-4">
         <React.Fragment>
           <div className="flex justify-between items-center h-full container lg:max-w-6xl">
             <Link to="/">
