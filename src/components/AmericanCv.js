@@ -26,12 +26,10 @@ class AmericanCv extends Component {
           </div>
 
           <div className="flex justify-between">
-            {personal.mail && (
-              <div className="flex items-center gap-1">
-                <img src={Mail} alt="" width={'10px'} />
-                {personal.mail}
-              </div>
-            )}
+            <div className="flex items-center gap-1">
+              <img src={Mail} alt="" width={'10px'} />
+              {personal.mail || 'usuario@mail.com'}
+            </div>
 
             {personal.phone && (
               <div className="flex items-center gap-1">
@@ -72,69 +70,79 @@ class AmericanCv extends Component {
             </p>
           </div>
 
-          <div className="">
-            <h3
-              style={{
-                borderColor: `${
-                  color === '#FFFFFF' || color === '#F3F4F6' ? '#E5E7EB' : color
-                }`,
-              }}
-              className="text-xl font-bold border-b-2 pb-1"
-            >
-              EXPERIENCIA LABORAL
-            </h3>
-            <div className="flex flex-col gap-2 my-2">
-              {jobs.map((job) => (
-                <div key={job.id} className="">
-                  <div className="">
-                    <span className="font-bold">{job.place}</span> -{' '}
-                    <span className="italic">{job.rol}</span>
+          {jobs.length > 0 && (
+            <div className="">
+              <h3
+                style={{
+                  borderColor: `${
+                    color === '#FFFFFF' || color === '#F3F4F6'
+                      ? '#E5E7EB'
+                      : color
+                  }`,
+                }}
+                className="text-xl font-bold border-b-2 pb-1"
+              >
+                EXPERIENCIA LABORAL
+              </h3>
+              <div className="flex flex-col gap-2 my-2">
+                {jobs.map((job) => (
+                  <div key={job.id} className="">
+                    <div className="">
+                      <span className="font-bold">{job.place}</span> -{' '}
+                      <span className="italic">{job.rol}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <p>
+                        {job.city}, {job.country}
+                      </p>
+                      <p>
+                        {job.datestart} - {job.dateend}
+                      </p>
+                    </div>
+                    <p className="text-gray-700">{job.description}</p>
                   </div>
-                  <div className="flex justify-between">
-                    <p>
-                      {job.city}, {job.country}
-                    </p>
-                    <p>
-                      {job.datestart} - {job.dateend}
-                    </p>
-                  </div>
-                  <p className="text-gray-700">{job.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className="">
-            <h3
-              style={{
-                borderColor: `${
-                  color === '#FFFFFF' || color === '#F3F4F6' ? '#E5E7EB' : color
-                }`,
-              }}
-              className="text-xl font-bold border-b-2 pb-1"
-            >
-              FORMACIÓN ADICIONAL
-            </h3>
-            <div className="grid grid-cols-2 gap-10 my-2">
-              {courses.map((course) => (
-                <div key={course.id} className="">
-                  <div className="">
-                    <span className="font-bold">{course.institute}</span> -{' '}
-                    <span className="italic">{course.title}</span>
-                  </div>
-                  <div className="flex text-sm gap-1">
-                    <p>
-                      {course.city}, {course.country}
+          {courses.length > 0 && (
+            <div className="">
+              <h3
+                style={{
+                  borderColor: `${
+                    color === '#FFFFFF' || color === '#F3F4F6'
+                      ? '#E5E7EB'
+                      : color
+                  }`,
+                }}
+                className="text-xl font-bold border-b-2 pb-1"
+              >
+                FORMACIÓN ADICIONAL
+              </h3>
+              <div className="grid grid-cols-2 gap-10 my-2">
+                {courses.map((course) => (
+                  <div key={course.id} className="">
+                    <div className="">
+                      <span className="font-bold">{course.institute}</span> -{' '}
+                      <span className="italic">{course.title}</span>
+                    </div>
+                    <div className="flex text-sm gap-1">
+                      <p>
+                        {course.city}, {course.country}
+                      </p>
+                      <p>
+                        ({course.datestart} - {course.dateend})
+                      </p>
+                    </div>
+                    <p className="text-gray-700 text-sm">
+                      {course.description}
                     </p>
-                    <p>
-                      ({course.datestart} - {course.dateend})
-                    </p>
                   </div>
-                  <p className="text-gray-700 text-sm">{course.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="">
             <h3

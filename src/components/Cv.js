@@ -106,46 +106,50 @@ export class Cv extends Component {
                 )}
               </div>
             </div>
-            <div className="pl-3">
-              {' '}
-              {/* EXTRA mt-20 */}
-              <h2
-                className={`border-b-2 border-black pb-2 font-semibold text-3xl ${
+            {jobs.length > 0 && (
+              <div
+                className={`pl-3 ${
                   personal.picture.length > 0 ? 'mt-10' : 'mt-14'
                 }`}
               >
-                experiencia laboral
-              </h2>
-              {jobs.map((job) => (
-                <CvJob
-                  key={job.id}
-                  place={job.place}
-                  datestart={job.datestart}
-                  dateend={job.dateend}
-                  city={job.city}
-                  country={job.country}
-                  rol={job.rol}
-                  description={job.description}
-                />
-              ))}
-            </div>
-            <div className="pl-3 mt-4">
-              <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
-                formación adicional
-              </h2>
-              {courses.map((course) => (
-                <CvCourse
-                  key={course.id}
-                  institute={course.institute}
-                  datestart={course.datestart}
-                  dateend={course.dateend}
-                  city={course.city}
-                  country={course.country}
-                  title={course.title}
-                  description={course.description}
-                />
-              ))}
-            </div>
+                <h2
+                  className={`border-b-2 border-black pb-2 font-semibold text-3xl`}
+                >
+                  experiencia laboral
+                </h2>
+                {jobs.map((job) => (
+                  <CvJob
+                    key={job.id}
+                    place={job.place}
+                    datestart={job.datestart}
+                    dateend={job.dateend}
+                    city={job.city}
+                    country={job.country}
+                    rol={job.rol}
+                    description={job.description}
+                  />
+                ))}
+              </div>
+            )}
+            {courses.length > 0 && (
+              <div className="pl-3 mt-4">
+                <h2 className="border-b-2 border-black pb-2 font-semibold text-3xl mt-14">
+                  formación adicional
+                </h2>
+                {courses.map((course) => (
+                  <CvCourse
+                    key={course.id}
+                    institute={course.institute}
+                    datestart={course.datestart}
+                    dateend={course.dateend}
+                    city={course.city}
+                    country={course.country}
+                    title={course.title}
+                    description={course.description}
+                  />
+                ))}
+              </div>
+            )}
           </div>
           <div className="border-t-4 border-gray-400 text-xs pt-2 flex">
             <p className="w-1/2 pl-3">{personal.mail || 'usuario@mail.com'}</p>
