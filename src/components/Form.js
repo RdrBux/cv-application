@@ -14,7 +14,7 @@ export class Form extends Component {
   constructor() {
     super();
     this.state = {
-      template: 'american',
+      template: 'swiss',
       color: '#F3F4F6',
       active: 'personal',
       jobs: [],
