@@ -148,7 +148,7 @@ export class Cv extends Component {
             </div>
           </div>
           <div className="border-t-4 border-gray-400 text-xs pt-2 flex">
-            <p className="w-1/2">{personal.mail || 'usuario@mail.com'}</p>
+            <p className="w-1/2 pl-3">{personal.mail || 'usuario@mail.com'}</p>
             {personal.linkedin && (
               <p className="w-1/2 flex items-center gap-1 ml-10">
                 <img src={Linkedin} alt="" width={10} /> {personal.linkedin}
