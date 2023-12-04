@@ -20,7 +20,7 @@ export class Nav extends Component {
               <select
                 value={template}
                 onChange={changeTemplate}
-                className="bg-indigo-900 font-normal px-2 py-1 border-2 rounded-full ring-0 outline-none"
+                className="bg-indigo-900 font-normal px-2 py-1 border-2 border-indigo-100 rounded-full ring-0 outline-none"
               >
                 <option value="swiss">Suiza</option>
                 <option value="american">Americana</option>

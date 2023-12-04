@@ -5,7 +5,7 @@ import social from '../../img/social.svg';
 export class About extends Component {
   render() {
     return (
-      <section className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-4 py-16 lg:py-24 gap-5 container lg:max-w-6xl">
+      <section className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 px-4 py-16 lg:py-24 lg:mt-40 gap-5 container lg:max-w-6xl">
         <img
           className="max-w-lg aspect-square object-cover shadow-2xl rounded-lg"
           src={aboutPhoto}
@@ -24,26 +24,15 @@ export class About extends Component {
             qué se busca en cada momento. Nuestras plantillas son examinadas y
             corregidas hasta garantizar la perfección.
           </p>
-          <div className="flex gap-6 lg:mt-10">
+          <div className="flex gap-6 lg:mt-10 bg-indigo-50 w-fit p-4 rounded-lg">
             <div className="flex flex-col">
-              <p className="text-indigo-900 font-bold text-3xl lg:text-4xl">
-                300+
-              </p>
-              <p className="text-lg text-slate-700 lg:text-xl">Usuarios</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-indigo-900 font-bold text-3xl lg:text-4xl">
-                12+
-              </p>
-              <p className="text-lg text-slate-700 lg:text-xl">Países</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-indigo-900 font-bold text-3xl lg:text-4xl">
-                98%
-              </p>
               <p className="text-lg text-slate-700 lg:text-xl">
-                Calificaciones positivas
+                Plantillas editables
               </p>
+              <p className="text-indigo-900 font-bold text-3xl lg:text-4xl">
+                100%
+              </p>
+              <p className="text-lg text-slate-700 lg:text-xl">Gratuitas</p>
             </div>
           </div>
         </div>

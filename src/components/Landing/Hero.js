@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import star from '../../img/star.svg';
 import heroCv from '../../img/hero-cv.png';
 
 export class Hero extends Component {
   render() {
     const { onClick } = this.props;
     return (
-      <div className="relative bg-slate-100 w-full pt-20">
+      <div className="relative w-full pt-20">
         <div className="top-0 absolute bg-indigo-900 z-10 w-1/2 lg:w-1/3 h-96 lg:h-screen rounded-bl-full right-0"></div>
         <div className="flex flex-col container lg:max-w-6xl items-center relative px-8 py-12 lg:pt-2">
           <img
@@ -17,29 +16,11 @@ export class Hero extends Component {
           />
         </div>
         <div className="w-full">
-          <div className="pb-7 flex flex-col items-center">
-            <div className="px-4 flex flex-col items-center container lg:items-start gap-3 lg:max-w-6xl lg:pt-2 lg:pb-4">
-              <div className="flex gap-1">
-                <img className="w-5" src={star} alt="star" />
-                <img className="w-5" src={star} alt="star" />
-                <img className="w-5" src={star} alt="star" />
-                <img className="w-5" src={star} alt="star" />
-                <img className="w-5" src={star} alt="star" />
-              </div>
-              <p className="text-center lg:text-left text-slate-700 max-w-md font-medium">
-                “Con CV Design logré hacer mi Curriculum Vitae en minutos desde
-                el celular y conseguí mi primera entrevista en un día.”
-              </p>
-              <p className="text-center text-xs lg:text-sm text-slate-500">
-                <span className="text-indigo-800">— María Martínez</span>,
-                estudiante de Lic. en Comunicación
-              </p>
-            </div>
-          </div>
-          <div className="px-4 py-6 lg:py-20 flex flex-col items-center bg-white">
+          <div className="px-4 py-6 flex flex-col items-center bg-white">
             <div className="px-4 container lg:max-w-6xl flex flex-col gap-6">
               <h1 className="text-4xl lg:text-5xl lg:max-w-xl font-bold text-slate-900 leading-10">
-                Construye tu próximo CV profesional en cinco minutos
+                Construye tu próximo Curriculum Vitae profesional en cinco
+                minutos
               </h1>
               <p className="font-light text-slate-700 lg:text-xl lg:max-w-xl">
                 En CV Design nos aseguramos de crear plantillas profesionales

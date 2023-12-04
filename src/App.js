@@ -1,7 +1,6 @@
 import About from './components/Landing/About';
 import Footer from './components/Landing/Footer';
 import Hero from './components/Landing/Hero';
-import Testimonial from './components/Landing/Testimonial';
 import React, { Component } from 'react';
 import Form from './components/Form';
 import Nav from './components/Landing/Nav';
@@ -28,7 +27,6 @@ export class App extends Component {
         <Nav />
         <Hero />
         <About />
-        <Testimonial />
         <Footer />
       </div>
     );
