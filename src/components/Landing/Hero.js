@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import heroCv from '../../img/hero-cv.png';
+import heroCv from '../../img/hero-cv.jpg';
 
 export class Hero extends Component {
   render() {

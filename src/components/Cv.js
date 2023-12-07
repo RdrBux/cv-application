@@ -37,7 +37,7 @@ export class Cv extends Component {
               )}
             </div>
             {personal.picture.length > 0 && (
-              <div className="font-bold text-4xl h-24">
+              <div className="font-bold text-4xl h-24 -mb-6">
                 <h1 className="pt-2">{personal.name || 'Nombre Apellido'}</h1>
               </div>
             )}
@@ -109,7 +109,7 @@ export class Cv extends Component {
             {jobs.length > 0 && (
               <div
                 className={`pl-3 ${
-                  personal.picture.length > 0 ? 'mt-10' : 'mt-14'
+                  personal.picture.length > 0 ? 'mt-32' : 'mt-14'
                 }`}
               >
                 <h2

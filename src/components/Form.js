@@ -426,13 +426,13 @@ export class Form extends Component {
                     <option value="#FFFFFF">Ninguno</option>
                     <option value="#F3F4F6">Gris</option>
                     <option value="#FEE2E2">Rojo</option>
-                    <option value="#FED7AA">Naranja</option>
-                    <option value="#FEF08A">Amarillo</option>
-                    <option value="#BBF7D0">Verde</option>
-                    <option value="#BAE6FD">Celeste</option>
-                    <option value="#BFDBFE">Azul</option>
-                    <option value="#DDD6FE">Violeta</option>
-                    <option value="#FBCFE8">Rosa</option>
+                    <option value="#FFEDD5">Naranja</option>
+                    <option value="#FEF9C3">Amarillo</option>
+                    <option value="#DCFCE7">Verde</option>
+                    <option value="#CFFAFE">Celeste</option>
+                    <option value="#DBEAFE">Azul</option>
+                    <option value="#EDE9FE">Violeta</option>
+                    <option value="#FCE7F3">Rosa</option>
                   </select>
                 </label>
               </div>
