@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/cv-application/static/css/main.4831caf5.css",
-    "main.js": "/cv-application/static/js/main.51908217.js",
+    "main.css": "/cv-application/static/css/main.dc9d6f3a.css",
+    "main.js": "/cv-application/static/js/main.5ecb7124.js",
+    "static/media/hero-cv.jpg": "/cv-application/static/media/hero-cv.57c568a0d461a29562f9.jpg",
     "static/media/about-photo.jpg": "/cv-application/static/media/about-photo.380c43c0142b9b4d799a.jpg",
-    "static/media/hero-cv.png": "/cv-application/static/media/hero-cv.dc38e43ca395c1a4b10b.png",
     "static/media/web.svg": "/cv-application/static/media/web.8554293384461a54a59c8966e71743f3.svg",
     "static/media/social.svg": "/cv-application/static/media/social.82bd5daa6000f33f93651dd4104d57d1.svg",
     "static/media/linkedin.svg": "/cv-application/static/media/linkedin.dbb74f21728443faf51ba44097b142be.svg",
     "static/media/phone.svg": "/cv-application/static/media/phone.b19bc0c0178419ea88b23b10e0348055.svg",
     "index.html": "/cv-application/index.html",
     "static/media/mail.svg": "/cv-application/static/media/mail.c06326222debe545efe2c1648d11486f.svg",
-    "main.4831caf5.css.map": "/cv-application/static/css/main.4831caf5.css.map",
-    "main.51908217.js.map": "/cv-application/static/js/main.51908217.js.map"
+    "main.dc9d6f3a.css.map": "/cv-application/static/css/main.dc9d6f3a.css.map",
+    "main.5ecb7124.js.map": "/cv-application/static/js/main.5ecb7124.js.map"
   },
   "entrypoints": [
-    "static/css/main.4831caf5.css",
-    "static/js/main.51908217.js"
+    "static/css/main.dc9d6f3a.css",
+    "static/js/main.5ecb7124.js"
   ]
 }
